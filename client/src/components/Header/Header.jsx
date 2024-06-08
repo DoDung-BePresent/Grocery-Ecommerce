@@ -9,6 +9,9 @@ import { CiSearch } from "react-icons/ci";
 import { LuHeart } from "react-icons/lu";
 import { BiCartAlt } from "react-icons/bi";
 import DarkModeToggle from "../ToggleDarkMode/DarkModeToggle";
+import GroceryDropDown from "../DropDown/GroceryDropDown";
+import BeautyDropDown from "../DropDown/BeautyDropDown";
+import DepartmentDropDown from "../DropDown/DepartmentDropDown";
 
 const Header = () => {
   return (
@@ -28,15 +31,39 @@ const Header = () => {
 
       {/* Navbar */}
       <nav className="hidden md:flex items-center font-semibold gap-10 dark:text-white">
-        <span className="flex items-center gap-2 text-[15px]">
-          Departments <FaAngleDown className="text-sm" />
-        </span>
-        <span className="flex items-center gap-2 text-[15px]">
-          Grocery <FaAngleDown className="text-sm" />
-        </span>
-        <span className="flex items-center gap-2 text-[15px]">
-          Beauty <FaAngleDown className="text-sm" />
-        </span>
+        <div>
+          <span
+            id="dropdownHoverButton"
+            data-dropdown-toggle="DepartmentDropDown"
+            data-dropdown-trigger="hover"
+            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+          >
+            Departments <FaAngleDown className="text-sm" />
+          </span>
+          <DepartmentDropDown id="DepartmentDropDown" />
+        </div>
+        <div>
+          <span
+            id="dropdownHoverButton"
+            data-dropdown-toggle="GroceryDropDown"
+            data-dropdown-trigger="hover"
+            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+          >
+            Grocery <FaAngleDown className="text-sm" />
+          </span>
+          <GroceryDropDown id="GroceryDropDown" />
+        </div>
+        <div>
+          <span
+            id="dropdownHoverButton"
+            data-dropdown-toggle="BeautyDropDown"
+            data-dropdown-trigger="hover"
+            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+          >
+            Beauty <FaAngleDown className="text-sm" />
+          </span>
+          <BeautyDropDown id="BeautyDropDown" />
+        </div>
       </nav>
 
       <div className="flex items-center">

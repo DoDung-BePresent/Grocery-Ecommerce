@@ -73,7 +73,7 @@ const Home = () => {
         <div className="grid md:grid-cols-4 items-center justify-between gap-6 md:gap-10">
           {/* PRODUCT*/}
           {products.map((product) => (
-            <div className="bg-white rounded-2xl p-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700 hover:shadow-xl transition duration-300 ease-in-out">
+            <div key={product.id} className="bg-white rounded-2xl p-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700 hover:shadow-xl transition duration-300 ease-in-out">
               <div className="flex flex-col items-center">
                 <div className="w-60 relative ">
                   <img src={product.thumbnail} alt={product.title} />

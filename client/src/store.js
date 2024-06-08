@@ -1,5 +1,5 @@
-import { createStore, combineReducers } from 'redux';
-import darkModeReducer from './reducers/darkModeReducer';
+import { createStore, combineReducers } from "redux";
+import darkModeReducer from "./reducers/darkModeReducer";
 
 const rootReducer = combineReducers({
   darkMode: darkModeReducer,

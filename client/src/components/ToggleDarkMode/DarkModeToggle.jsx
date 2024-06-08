@@ -10,7 +10,7 @@ const DarkModeToggle = () => {
   const handleToggle = () => {
     dispatch(toggleDarkMode());
   };
-  
+
   return (
     <button
       onClick={handleToggle}
