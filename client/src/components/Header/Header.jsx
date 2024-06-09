@@ -1,3 +1,8 @@
+import { useState } from "react";
+
+// Components
+import CollapsedMenu from "../CollapsedMenu/CollapsedMenu";
+
 // Images
 import Logo from "../../assets/images/Logo.svg";
 import Avatar from "../../assets/images/Avatar.png";
@@ -14,12 +19,23 @@ import BeautyDropDown from "../DropDown/BeautyDropDown";
 import DepartmentDropDown from "../DropDown/DepartmentDropDown";
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <header className="bg-slate-200 dark:bg-gray-900 flex items-center justify-between container px-5 md:px-10 h-20 sticky top-0 z-10 shadow-md dark:shadow-gray-700">
       {/* Toggle */}
       <div className="md:hidden">
-        <RiMenu4Fill className="dark:text-white text-2xl text-black" />
+        <RiMenu4Fill
+          className="dark:text-white text-2xl text-black"
+          onClick={() => setShowMenu(!showMenu)}
+        />
       </div>
+
+      {/* Collapsed Menu */}
+      <CollapsedMenu
+        showMenu={showMenu}
+        handleShowMenu={() => setShowMenu(!showMenu)}
+      />
 
       {/* Logo */}
       <div className="flex items-center gap-3">

@@ -14,7 +14,7 @@ const BeautyDropDown = ({ id }) => {
       id={id}
       className="hidden z-100 relative bg-white w-[67vw] p-6 rounded-2xl flex dark:bg-gray-900"
     >
-      <IoTriangleSharp className="text-white text-5xl absolute -top-6 right-[480px] dark:text-gray-900" />
+      <IoTriangleSharp className="text-white text-5xl absolute -top-6 right-[500px] dark:text-gray-900" />
       <div className="pr-8">
         <div className="">
           <div className="flex items-center gap-4">
