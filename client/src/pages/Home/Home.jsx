@@ -9,6 +9,12 @@ import { MdFilterList } from "react-icons/md";
 // DUMMY DATA
 import { categories, products } from "../../data/data";
 
+// Components
+import Filter from "../../components/Filter/Filter";
+
+// Ant Design Components
+import { Dropdown, Space } from "antd";
+
 const Home = () => {
   return (
     <section className="container mx-auto bg-slate-100 py-8 dark:bg-gray-800">
@@ -59,13 +65,19 @@ const Home = () => {
             Total LavAzza 1320
           </h3>
           {/* FILTER */}
-          <div className="bg-white w-fit p-2 px-3 rounded-lg flex items-center gap-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700">
-            <span className="font-semibold text-sm text-slate-600 dark:text-white">
-              Filter
-            </span>
-            <span className="">
-              <MdFilterList className="text-xl" />
-            </span>
+          <div>
+            <Dropdown overlay={<Filter />} trigger={["click"]}>
+              <Space>
+                <div className="bg-white w-fit p-2 px-3 rounded-lg flex items-center gap-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700">
+                  <span className="font-semibold text-sm text-slate-600 dark:text-white">
+                    Filter
+                  </span>
+                  <span className="">
+                    <MdFilterList className="text-xl" />
+                  </span>
+                </div>
+              </Space>
+            </Dropdown>
           </div>
         </div>
 
@@ -73,7 +85,10 @@ const Home = () => {
         <div className="grid md:grid-cols-4 items-center justify-between gap-6 md:gap-10">
           {/* PRODUCT*/}
           {products.map((product) => (
-            <div key={product.id} className="bg-white rounded-2xl p-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700 hover:shadow-xl transition duration-300 ease-in-out">
+            <div
+              key={product.id}
+              className="bg-white rounded-2xl p-4 dark:bg-gray-900 dark:text-white shadow-md dark:shadow-lg dark:shadow-gray-700 hover:shadow-xl transition duration-300 ease-in-out"
+            >
               <div className="flex flex-col items-center">
                 <div className="w-60 relative ">
                   <img src={product.thumbnail} alt={product.title} />
