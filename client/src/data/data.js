@@ -1,6 +1,13 @@
-import item1 from "../assets/images/item-1.png";
-import item2 from "../assets/images/item-2.png";
-import item3 from "../assets/images/item-3.png";
+import ClassicoCoffee from "../assets/images/Classico.svg";
+import CostaCoffee from "../assets/images/CostaCoffee.svg";
+import DunkinCoffee from "../assets/images/Dunkin.svg";
+import GloriaJeans from "../assets/images/GloriaJean's.svg";
+import LavazzaCoffee from "../assets/images/LavAzza.svg";
+import NescafeCoffee from "../assets/images/Nescafe.svg";
+import PatchRoast from "../assets/images/PatchRoast.svg";
+import PeetsCoffee from "../assets/images/Peet'sCoffee.svg";
+import StarbucksCoffee from "../assets/images/Starbucks.svg";
+import TimHortons from "../assets/images/TimHorton's.svg";
 import item4 from "../assets/images/item-4.png";
 import item5 from "../assets/images/item-5.png";
 import item6 from "../assets/images/item-6.png";
@@ -9,24 +16,53 @@ import item7 from "../assets/images/item-7.png";
 export const categories = [
   {
     id: 1,
-    thumbnail: item1,
-    minPrice: 24,
-    maxPrice: 150,
-    des: "New sumatra mandeling coffe blend",
+    thumbnail: StarbucksCoffee,
+    brand: "Starbucks",
   },
   {
     id: 2,
-    thumbnail: item2,
-    minPrice: 37,
-    maxPrice: 160,
-    des: "Espresso Arabica and Robusta Beans",
+    thumbnail: LavazzaCoffee,
+    brand: "LavAzza",
   },
   {
     id: 3,
-    thumbnail: item3,
-    minPrice: 32,
-    maxPrice: 160,
-    des: "Lavazza top class whole beans coffee blend",
+    thumbnail: CostaCoffee,
+    brand: "Costa Coffee",
+  },
+  {
+    id: 4,
+    thumbnail: PeetsCoffee,
+    brand: "Peet's Coffee",
+  },
+  {
+    id: 5,
+    thumbnail: NescafeCoffee,
+    brand: "Nescafe",
+  },
+  {
+    id: 6,
+    thumbnail: GloriaJeans,
+    brand: "Gloria Jean's",
+  },
+  {
+    id: 7,
+    thumbnail: TimHortons,
+    brand: "Tim Horton's",
+  },
+  {
+    id: 8,
+    thumbnail: DunkinCoffee,
+    brand: "Dunkin",
+  },
+  {
+    id: 9,
+    thumbnail: PatchRoast,
+    brand: "Patch Roast",
+  },
+  {
+    id: 10,
+    thumbnail: ClassicoCoffee,
+    brand: "Classico",
   },
 ];
 
