@@ -6,21 +6,40 @@ import { GrShieldSecurity } from "react-icons/gr";
 import { FiSmartphone } from "react-icons/fi";
 import { IoTriangleSharp } from "react-icons/io5";
 
-const DepartmentDropDown = ({ id }) => {
+const DepartmentDropDown = ({ darkModeEnabled }) => {
   return (
     <div
-      id={id}
-      className="hidden z-100 relative bg-white w-[70vw] p-6 rounded-2xl flex dark:bg-gray-900"
+      className={`z-100 relative ${
+        darkModeEnabled ? "bg-gray-900" : "bg-white"
+      } -ml-[360px] p-6 rounded-2xl flex mt-12`}
     >
-      <IoTriangleSharp className="text-white text-5xl absolute -top-6 right-[525px] dark:text-gray-900" />
-      <div className="border-r-2 pr-8 border-r-gray">
+      <IoTriangleSharp
+        className={`${
+          darkModeEnabled ? "text-gray-900" : "text-white"
+        } text-5xl absolute -top-6 right-[650px] `}
+      />
+      <div
+        className={`border-r-2 pr-8 border-r-gray ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="flex items-center gap-4">
           <span className="bg-yellow-200 inline-block w-6 h-6 rounded-full relative">
-            <AiOutlineAppstore className="absolute -right-2 -bottom-1 text-xl" />
+            <AiOutlineAppstore
+              className={`absolute -right-2 -bottom-1 text-xl ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            />
           </span>
-          <h3 className="text-base">All Departments</h3>
+          <h3
+            className={`font-semibold ${
+              darkModeEnabled ? "text-gray-200" : "text-black"
+            }`}
+          >
+            All Departments
+          </h3>
         </div>
-        <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+        <div className="flex flex-col gap-1 text-sm font-normal  ml-10 mt-4">
           <a href="#" className="hover:text-blue-600">
             Savings & Featured Shops
           </a>
@@ -65,16 +84,30 @@ const DepartmentDropDown = ({ id }) => {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-3 px-6 gap-14">
+      <div
+        className={`grid grid-cols-3 px-6 gap-14 ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="">
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-purple-300 inline-block w-6 h-6 rounded relative">
-                <PiTelevisionSimpleBold className="absolute -right-2 -bottom-1 text-xl" />
+                <PiTelevisionSimpleBold
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">TV & Video</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                TV & Video
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop all TVs
               </a>
@@ -102,11 +135,21 @@ const DepartmentDropDown = ({ id }) => {
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <span className="bg-blue-300 inline-block w-6 h-6 rounded relative">
-                <PiTelevisionSimpleBold className="absolute -right-2 -bottom-1 text-xl" />
+                <PiTelevisionSimpleBold
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Wearable Technology</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Wearable Technology
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Galaxy Watch
               </a>
@@ -128,11 +171,21 @@ const DepartmentDropDown = ({ id }) => {
         <div className="">
           <div className="flex items-center gap-4">
             <span className="bg-red-200 inline-block w-6 h-6 rounded-full relative">
-              <MdComputer className="absolute -right-2 -bottom-1 text-xl" />
+              <MdComputer
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">All Departments</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              All Departments
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Shop All Computers
             </a>
@@ -178,11 +231,21 @@ const DepartmentDropDown = ({ id }) => {
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-green-300 inline-block w-6 h-6 rounded relative">
-                <GrShieldSecurity className="absolute -right-2 -bottom-1 text-xl" />
+                <GrShieldSecurity
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Savings</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Savings
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Tech Savings
               </a>
@@ -198,11 +261,21 @@ const DepartmentDropDown = ({ id }) => {
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <span className="bg-purple-300 inline-block w-6 h-6 rounded relative">
-                <FiSmartphone className="absolute -right-2 -bottom-1 text-xl" />
+                <FiSmartphone
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Cell Phones</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Cell Phones
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Wireless Deals
               </a>

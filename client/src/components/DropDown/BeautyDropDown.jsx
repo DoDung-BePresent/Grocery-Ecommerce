@@ -8,22 +8,41 @@ import { PiCookingPotLight } from "react-icons/pi";
 import { BsAward } from "react-icons/bs";
 import { MdOutlineFace4 } from "react-icons/md";
 
-const BeautyDropDown = ({ id }) => {
+const BeautyDropDown = ({ darkModeEnabled }) => {
   return (
     <div
-      id={id}
-      className="hidden z-100 relative bg-white w-[67vw] p-6 rounded-2xl flex dark:bg-gray-900"
+      className={`z-100 relative ${
+        darkModeEnabled ? "bg-gray-900" : "bg-white"
+      } mt-12 -ml-[480px] p-6 rounded-2xl flex`}
     >
-      <IoTriangleSharp className="text-white text-5xl absolute -top-6 right-[500px] dark:text-gray-900" />
-      <div className="pr-8">
+      <IoTriangleSharp
+        className={` ${
+          darkModeEnabled ? "text-gray-900" : "text-white"
+        } text-5xl absolute -top-6 left-[480px]`}
+      />
+      <div
+        className={`pr-8 ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="">
           <div className="flex items-center gap-4">
             <span className="bg-purple-300 inline-block w-6 h-6 rounded-full relative">
-              <BiCartAlt className="absolute -right-2 -bottom-1 text-xl" />
+              <BiCartAlt
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Featured Shops</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Featured Shops
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Pickup Today in Beauty
             </a>
@@ -50,11 +69,21 @@ const BeautyDropDown = ({ id }) => {
         <div className="mt-5">
           <div className="flex items-center gap-3">
             <span className="bg-yellow-200 inline-block w-6 h-6 rounded-full relative">
-              <GiLipstick className="absolute -right-2 -bottom-1 text-xl" />
+              <GiLipstick
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Trending in Beauty</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Trending in Beauty
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Trending Beauty Products
             </a>
@@ -73,16 +102,30 @@ const BeautyDropDown = ({ id }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 px-6 gap-14">
+      <div
+        className={`grid grid-cols-3 px-6 gap-14 ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="">
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-purple-300 inline-block w-6 h-6 rounded relative">
-                <FaRegStar className="absolute -right-2 -bottom-1 text-xl" />
+                <FaRegStar
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Featured Brands</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Featured Brands
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop All
               </a>
@@ -113,11 +156,21 @@ const BeautyDropDown = ({ id }) => {
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <span className="bg-blue-300 inline-block w-6 h-6 rounded relative">
-                <PiCookingPotLight className="absolute -right-2 -bottom-1 text-xl" />
+                <PiCookingPotLight
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Wearable Technology</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Wearable Technology
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Black Owned Beauty
               </a>
@@ -133,11 +186,21 @@ const BeautyDropDown = ({ id }) => {
         <div className="">
           <div className="flex items-center gap-4">
             <span className="bg-green-300 inline-block w-6 h-6 rounded-full relative">
-              <BsAward className="absolute -right-2 -bottom-1 text-xl" />
+              <BsAward
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Premium Beauty</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Premium Beauty
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Shop All
             </a>
@@ -164,11 +227,21 @@ const BeautyDropDown = ({ id }) => {
         <div className="">
           <div className="flex items-center gap-4">
             <span className="bg-yellow-300 inline-block w-6 h-6 rounded relative">
-              <MdOutlineFace4 className="absolute -right-2 -bottom-1 text-xl" />
+              <MdOutlineFace4
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Savings</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Savings
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Shop All
             </a>

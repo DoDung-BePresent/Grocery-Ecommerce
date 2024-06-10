@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { useState } from "react";
 
 // Components
@@ -18,8 +19,12 @@ import GroceryDropDown from "../DropDown/GroceryDropDown";
 import BeautyDropDown from "../DropDown/BeautyDropDown";
 import DepartmentDropDown from "../DropDown/DepartmentDropDown";
 
+// Ant Design Components
+import { Dropdown, Space } from "antd";
+
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
 
   return (
     <header className="bg-slate-200 dark:bg-gray-900 flex items-center justify-between container px-5 md:px-10 h-20 sticky top-0 z-10 shadow-md dark:shadow-gray-700">
@@ -37,58 +42,60 @@ const Header = () => {
         handleShowMenu={() => setShowMenu(!showMenu)}
       />
 
-      {/* Logo */}
-      <div className="flex items-center gap-3">
-        <img src={Logo} alt="Logo" className="w-6 md:w-10" />
-        <span className="text-xl md:text-2xl font-extrabold dark:text-white">
-          grocerymart
-        </span>
-      </div>
+      <div className="flex items-center gap-40">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <img src={Logo} alt="Logo" className="w-6 md:w-10" />
+          <span className="text-xl md:text-2xl font-extrabold dark:text-white">
+            grocerymart
+          </span>
+        </div>
 
-      {/* Navbar */}
-      <nav className="hidden md:flex items-center font-semibold gap-10 dark:text-white">
-        <div>
-          <span
-            id="dropdownHoverButton"
-            data-dropdown-toggle="DepartmentDropDown"
-            data-dropdown-trigger="hover"
-            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+        {/* Navbar */}
+        <nav className="hidden md:flex items-center font-semibold gap-10 dark:text-white">
+          <Dropdown
+            overlay={<DepartmentDropDown darkModeEnabled={darkModeEnabled} />}
+            trigger={["hover"]}
           >
-            Departments <FaAngleDown className="text-sm" />
-          </span>
-          <DepartmentDropDown id="DepartmentDropDown" />
-        </div>
-        <div>
-          <span
-            id="dropdownHoverButton"
-            data-dropdown-toggle="GroceryDropDown"
-            data-dropdown-trigger="hover"
-            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+            <Space>
+              Departments <FaAngleDown className="text-sm" />
+            </Space>
+          </Dropdown>
+
+          <Dropdown
+            overlay={<GroceryDropDown darkModeEnabled={darkModeEnabled} />}
+            trigger={["hover"]}
           >
-            Grocery <FaAngleDown className="text-sm" />
-          </span>
-          <GroceryDropDown id="GroceryDropDown" />
-        </div>
-        <div>
-          <span
-            id="dropdownHoverButton"
-            data-dropdown-toggle="BeautyDropDown"
-            data-dropdown-trigger="hover"
-            className="flex items-center gap-2 text-[15px] cursor-pointer py-12"
+            <Space>
+              Grocery <FaAngleDown className="text-sm" />
+            </Space>
+          </Dropdown>
+
+          <Dropdown
+            overlay={<BeautyDropDown darkModeEnabled={darkModeEnabled} />}
+            trigger={["hover"]}
           >
-            Beauty <FaAngleDown className="text-sm" />
-          </span>
-          <BeautyDropDown id="BeautyDropDown" />
-        </div>
-      </nav>
+            <Space>
+              Beauty <FaAngleDown className="text-sm" />
+            </Space>
+          </Dropdown>
+        </nav>
+      </div>
 
       <div className="flex items-center">
         {/* Search */}
         <div className="hidden md:flex items-center mr-4">
-          <input className="hidden" type="text" name="" id="search" />
+          <input
+            className="bg-white p-2 rounded-l-lg border-none dark:bg-gray-700 dark:text-white w-60 px-4 placeholder:text-slate-400"
+            type="text"
+            name="Search Products"
+            placeholder="Product name"
+            id="search"
+            style={{ boxShadow: "none" }}
+          />
           <label
             htmlFor="search"
-            className="bg-white p-2 rounded-lg inline-block dark:bg-gray-700 dark:text-white"
+            className="bg-white p-2 rounded-r-lg inline-block dark:bg-gray-700 dark:text-white"
           >
             <CiSearch className="text-2xl" />
           </label>

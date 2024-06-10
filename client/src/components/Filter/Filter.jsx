@@ -1,10 +1,65 @@
+import styled from "styled-components";
 // Ant Design Components
-import { Slider, Select, Input, Tooltip } from "antd";
+import { Slider, Select, Input, Tooltip, ConfigProvider } from "antd";
 import { useState } from "react";
 const { Search } = Input;
 
 // React Icons
 import { IoTriangleSharp } from "react-icons/io5";
+import { useSelector } from "react-redux";
+
+// Style Components
+
+const InputWrapper = styled(Input)`
+  &.ant-input-outlined {
+    background: transparent !important;
+  }
+`;
+
+const SelectWrapper = styled(Select)`
+  .ant-select-selector {
+    background: transparent !important;
+  }
+
+  .ant-select-selection-search,
+  .ant-select-arrow {
+    color: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "white" : "black"} !important;
+  }
+
+  .ant-select-selection-placeholder,
+  .ant-select-selection-item {
+    color: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "white" : "black"} !important;
+  }
+`;
+
+const SearchWrapper = styled(Search)`
+  .ant-input-affix-wrapper {
+    background: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "transparent" : "white"} !important;
+  }
+
+  .ant-input-affix-wrapper .ant-input {
+    color: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "white" : "black"} !important;
+  }
+
+  .ant-btn {
+    background: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "transparent" : "white"} !important;
+  }
+
+  .ant-btn-icon {
+    color: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "white" : "black"} !important;
+  }
+
+  .ant-input-clear-icon {
+    color: ${({ $darkModeEnabled }) =>
+      $darkModeEnabled ? "white" : "black"} !important;
+  }
+`;
 
 const formatNumber = (value) => new Intl.NumberFormat().format(value);
 const NumericInput = (props) => {
@@ -39,7 +94,7 @@ const NumericInput = (props) => {
       placement="topLeft"
       overlayClassName="numeric-input"
     >
-      <Input
+      <InputWrapper
         {...props}
         onChange={handleChange}
         onBlur={handleBlur}
@@ -50,7 +105,9 @@ const NumericInput = (props) => {
   );
 };
 
-const Filter = ({ id }) => {
+const Filter = () => {
+  const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
+
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(10000);
 
@@ -69,14 +126,19 @@ const Filter = ({ id }) => {
 
   return (
     <div
-      id={id}
-      className="absolute z-10 bg-white w-[70vw] right-0 p-5 rounded-2xl shadow-lg mt-2"
+      className={`absolute z-10 w-[82vw] md:w-[70vw] right-0 p-5 rounded-2xl shadow-2xl mt-3 ${
+        darkModeEnabled ? "bg-gray-800 shadow-black text-white" : "bg-white"
+      }`}
     >
-      <IoTriangleSharp className="text-4xl absolute -top-4 right-10 text-white" />
+      <IoTriangleSharp
+        className={`text-4xl absolute -top-4 right-10 ${
+          darkModeEnabled ? "text-gray-800" : "text-white"
+        }`}
+      />
       <h1 className="font-bold text-xl mb-4">Filter</h1>
-      <div className="grid grid-cols-3 divide-x items-center">
+      <div className="grid grid-rows-3 divide-y items-center md:grid-cols-3 md:divide-x md:grid-rows-none md:divide-y-0">
         {/* Price */}
-        <div className="pr-5">
+        <div className="md:pr-5">
           <h1 className="font-bold text-xl mb-6">Price</h1>
 
           <Slider
@@ -91,7 +153,10 @@ const Filter = ({ id }) => {
               <span>Minimum</span>
               <NumericInput
                 prefix="$"
-                style={{ width: "100%" }}
+                style={{
+                  width: "100%",
+                  color: `${darkModeEnabled ? "white" : "black"}`,
+                }}
                 placeholder="Min price"
                 value={minPrice}
                 onChange={onChangeMinPrice}
@@ -103,7 +168,10 @@ const Filter = ({ id }) => {
               <span>Maximum</span>
               <NumericInput
                 prefix="$"
-                style={{ width: "100%" }}
+                style={{
+                  width: "100%",
+                  color: `${darkModeEnabled ? "white" : "black"}`,
+                }}
                 placeholder="Max price"
                 value={maxPrice}
                 onChange={onChangeMaxPrice}
@@ -114,9 +182,9 @@ const Filter = ({ id }) => {
           </div>
         </div>
         {/* Size/Weight */}
-        <div className="px-5">
+        <div className="md:px-5">
           <h1 className="font-bold text-xl mb-4 mt-2">Size/Weight</h1>
-          <Select
+          <SelectWrapper
             style={{
               width: "100%",
             }}
@@ -140,32 +208,82 @@ const Filter = ({ id }) => {
                 label: "500g",
               },
             ]}
+            $darkModeEnabled={darkModeEnabled}
           />
           <div className="flex items-center justify-between my-5">
-            <span className="label">Small</span>
-            <span className="label">Medium</span>
-            <span className="label">Large</span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Small
+            </span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Medium
+            </span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Large
+            </span>
           </div>
         </div>
         {/* Brand */}
-        <div className="px-5">
+        <div className="md:px-5">
           <h1 className="font-bold text-xl mb-4 mt-2">Brand</h1>
-          <Search
-            placeholder="Search brand name"
-            allowClear
-            style={{
-              width: "100%",
+          <ConfigProvider
+            theme={{
+              components: {
+                Input: {
+                  colorTextPlaceholder: `${
+                    darkModeEnabled ? "white" : "black"
+                  }`,
+                },
+              },
             }}
-            size="large"
-          />
+          >
+            <SearchWrapper
+              placeholder="Search brand name"
+              allowClear
+              style={{
+                width: "100%",
+              }}
+              size="large"
+              $darkModeEnabled={darkModeEnabled}
+            />
+          </ConfigProvider>
           <div className="flex items-center justify-between my-5">
-            <span className="label">Lavazza</span>
-            <span className="label">Nescafe</span>
-            <span className="label">Starbucks</span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Lavazza
+            </span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Nescafe
+            </span>
+            <span
+              className={`label ${
+                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
+              }`}
+            >
+              Starbucks
+            </span>
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-4 justify-end mr-5 mt-3">
+      <div className="flex items-center gap-4 justify-end md:mr-5 mt-3">
         <button className="text-gray-500 font-semibold">Cancel</button>
         <button className="bg-blue-500 p-2 px-3 rounded-lg text-black font-semibold">
           Show Result

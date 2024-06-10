@@ -9,22 +9,41 @@ import { TbCandy } from "react-icons/tb";
 import { FiCoffee } from "react-icons/fi";
 import { CiCoffeeCup } from "react-icons/ci";
 
-const GroceryDropDown = ({ id }) => {
+const GroceryDropDown = ({ darkModeEnabled }) => {
   return (
     <div
-      id={id}
-      className="hidden z-100 relative bg-white w-[71vw] p-6 rounded-2xl flex dark:bg-gray-900"
+      className={`z-100 relative ${
+        darkModeEnabled ? "bg-gray-900" : "bg-white"
+      } mt-12 -ml-[480px] p-6 rounded-2xl flex`}
     >
-      <IoTriangleSharp className="text-white text-5xl absolute -top-6 right-[525px] dark:text-gray-900" />
-      <div className="pr-8">
+      <IoTriangleSharp
+        className={`${
+          darkModeEnabled ? "text-gray-900" : "text-white"
+        } text-5xl absolute -top-6 right-[480px]`}
+      />
+      <div
+        className={`pr-8 ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="">
           <div className="flex items-center gap-4">
             <span className="bg-purple-200 inline-block w-6 h-6 rounded-md relative">
-              <BiCartAlt className="absolute -right-2 -bottom-1 text-xl" />
+              <BiCartAlt
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Grocery</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Grocery
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Shop All
             </a>
@@ -39,11 +58,21 @@ const GroceryDropDown = ({ id }) => {
         <div className="mt-5">
           <div className="flex items-center gap-4">
             <span className="bg-green-200 inline-block w-6 h-6 rounded-md relative">
-              <GiTomato className="absolute -right-2 -bottom-1 text-xl" />
+              <GiTomato
+                className={`absolute -right-2 -bottom-1 text-xl ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              />
             </span>
-            <h3 className="text-base">Fresh Produce</h3>
+            <h3
+              className={`font-semibold ${
+                darkModeEnabled ? "text-gray-200" : "text-black"
+              }`}
+            >
+              Fresh Produce
+            </h3>
           </div>
-          <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+          <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
             <a href="#" className="hover:text-blue-600">
               Shop All
             </a>
@@ -74,16 +103,30 @@ const GroceryDropDown = ({ id }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 px-6 gap-14">
+      <div
+        className={`grid grid-cols-3 px-6 gap-14 ${
+          darkModeEnabled ? "text-gray-400" : "text-gray-600"
+        }`}
+      >
         <div className="">
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-blue-300 inline-block w-6 h-6 rounded relative">
-                <PiBreadDuotone className="absolute -right-2 -bottom-1 text-xl" />
+                <PiBreadDuotone
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Bakery & Bread</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Bakery & Bread
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop All
               </a>
@@ -114,11 +157,21 @@ const GroceryDropDown = ({ id }) => {
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <span className="bg-yellow-200 inline-block w-6 h-6 rounded relative">
-                <PiCookingPotLight className="absolute -right-2 -bottom-1 text-xl" />
+                <PiCookingPotLight
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Frozen</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Frozen
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Frozen Breakfast
               </a>
@@ -135,11 +188,21 @@ const GroceryDropDown = ({ id }) => {
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-purple-300 inline-block w-6 h-6 rounded-full relative">
-                <IoWaterOutline className="absolute -right-2 -bottom-1 text-xl" />
+                <IoWaterOutline
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Snacks</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Snacks
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop All
               </a>
@@ -160,11 +223,21 @@ const GroceryDropDown = ({ id }) => {
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-red-300 inline-block w-6 h-6 rounded-full relative">
-                <TbCandy className="absolute -right-2 -bottom-1 text-xl" />
+                <TbCandy
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Candy</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Candy
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop All
               </a>
@@ -193,11 +266,21 @@ const GroceryDropDown = ({ id }) => {
           <div className="">
             <div className="flex items-center gap-4">
               <span className="bg-red-300 inline-block w-6 h-6 rounded relative">
-                <FiCoffee className="absolute -right-2 -bottom-1 text-xl" />
+                <FiCoffee
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Cocktails & Mixes Coffee</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Cocktails & Mixes Coffee
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Ground Coffee
               </a>
@@ -216,11 +299,21 @@ const GroceryDropDown = ({ id }) => {
           <div className="mt-5">
             <div className="flex items-center gap-4">
               <span className="bg-green-300 inline-block w-6 h-6 rounded relative">
-                <CiCoffeeCup className="absolute -right-2 -bottom-1 text-xl" />
+                <CiCoffeeCup
+                  className={`absolute -right-2 -bottom-1 text-xl ${
+                    darkModeEnabled ? "text-gray-200" : "text-black"
+                  }`}
+                />
               </span>
-              <h3 className="text-base">Beverages</h3>
+              <h3
+                className={`font-semibold ${
+                  darkModeEnabled ? "text-gray-200" : "text-black"
+                }`}
+              >
+                Beverages
+              </h3>
             </div>
-            <div className="flex flex-col gap-1 text-sm font-normal text-gray-600 ml-10 mt-4 dark:text-gray-400">
+            <div className="flex flex-col gap-1 text-sm font-normal ml-10 mt-4">
               <a href="#" className="hover:text-blue-600">
                 Shop All
               </a>
