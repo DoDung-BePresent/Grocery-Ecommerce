@@ -14,7 +14,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={handleToggle}
-      className="p-[10px] mr-4 bg-white text-xl rounded-lg dark:text-white dark:bg-gray-700"
+      className="p-[10px] mr-4 bg-white text-xl rounded-lg dark:text-white dark:bg-dark-2 outline-primary"
     >
       {darkModeEnabled ? <MdDarkMode /> : <CiLight />}
     </button>

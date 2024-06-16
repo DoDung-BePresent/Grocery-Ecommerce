@@ -30,10 +30,15 @@ const MenuWrapper = styled(Menu)`
     border-inline-end: 0 !important;
   }
 
+  &.ant-menu-light.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+    background: transparent !important;
+  }
+
   &.ant-menu.ant-menu-root.ant-menu-inline {
     background-color: ${(props) =>
-      props.$darkModeEnabled ? "rgb(31 41 55)" : "#fff"} !important;
-    color: ${(props) => (props.$darkModeEnabled ? "#fff" : "#000")} !important;
+      props.$darkModeEnabled ? "#171C28" : "#fff"} !important;
+    color: ${(props) =>
+      props.$darkModeEnabled ? "#fff" : "#171C28"} !important;
   }
 
   &.ant-menu-light.ant-menu-root.ant-menu-inline .ant-menu-item,
@@ -43,12 +48,12 @@ const MenuWrapper = styled(Menu)`
     .ant-menu-item-group-title
     span {
     color: ${(props) =>
-      props.$darkModeEnabled ? "rgb(209 213 219)" : "#000"} !important;
+      props.$darkModeEnabled ? "#9E9DA8" : "#000"} !important;
   }
 
   .ant-menu-item.ant-menu-item-active.ant-menu-item-selected.ant-menu-item-only-child {
     color: ${(props) =>
-      props.$darkModeEnabled ? "#000" : "rgb(209 213 219)"} !important;
+      props.$darkModeEnabled ? "#000" : "#9E9DA8"} !important;
   }
 
   .ant-menu.ant-menu-sub.ant-menu-inline > li,
@@ -399,49 +404,48 @@ const CollapsedMenu = ({ showMenu, handleShowMenu }) => {
   ];
 
   return (
-    <div
-      className={`bg-white absolute top-0 left-0 ${
-        showMenu ? "" : "-translate-x-full"
-      } w-[85%] p-4 py-6 h-screen overflow-scroll custom-scrollbar dark:bg-gray-800 dark:text-gray-300 ease-in duration-300`}
-    >
-      <style>
-        {`
-          .custom-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-          .custom-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-          }
-        `}
-      </style>
-      <FaArrowLeftLong
-        className="mb-3 ml-3 text-lg hover:bg-slate-200 rounded-lg p-1 w-6 h-6 dark:hover:text-black"
-        onClick={handleShowMenu}
-      />
-      <div className="flex flex-col gap-2 px-3 pr-5">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <BiCartAlt className="text-xl" />
-            <span>Cart</span>
+    <div>
+      {/* Overlay */}
+      {showMenu && (
+        <div
+          className="fixed inset-0 bg-black dark:bg-transparent opacity-50"
+          onClick={handleShowMenu}
+        />
+      )}
+      {/* Menu */}
+      <div
+        className={`bg-white absolute top-0 left-0 ${
+          showMenu ? "" : "-translate-x-full"
+        } w-[85%] p-4 py-6 h-screen overflow-scroll custom-scrollbar dark:bg-dark-1 dark:text-dark-s-1 ease-in duration-300`}
+      >
+        <FaArrowLeftLong
+          className="mb-3 ml-3 text-lg p-1 w-6 h-6 outline-primary rounded-md"
+          onClick={handleShowMenu}
+        />
+        <div className="flex flex-col gap-2 px-3 pr-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <BiCartAlt className="text-xl" />
+              <span>Cart</span>
+            </div>
+            <span className="font-bold">3</span>
           </div>
-          <span className="font-bold">3</span>
-        </div>
 
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <LuHeart className="text-xl" />
-            <span>Favorite</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <LuHeart className="text-xl" />
+              <span>Favorite</span>
+            </div>
+            <span className="font-bold">3</span>
           </div>
-          <span className="font-bold">3</span>
         </div>
+        <MenuWrapper
+          $darkModeEnabled={darkModeEnabled}
+          defaultOpenKeys={["sub1"]}
+          mode="inline"
+          items={items}
+        />
       </div>
-      <MenuWrapper
-        $darkModeEnabled={darkModeEnabled}
-        defaultOpenKeys={["sub1"]}
-        mode="inline"
-        items={items}
-      />
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { useState } from "react";
 
 // Components
 import CollapsedMenu from "../CollapsedMenu/CollapsedMenu";
+import CartDropDown from "../DropDown/CartDropDown";
+import Search from "../Search/Search";
 
 // Images
 import Logo from "../../assets/images/Logo.svg";
@@ -11,7 +13,6 @@ import Avatar from "../../assets/images/Avatar.png";
 // Icons
 import { RiMenu4Fill } from "react-icons/ri";
 import { FaAngleDown } from "react-icons/fa6";
-import { CiSearch } from "react-icons/ci";
 import { LuHeart } from "react-icons/lu";
 import { BiCartAlt } from "react-icons/bi";
 import DarkModeToggle from "../ToggleDarkMode/DarkModeToggle";
@@ -21,15 +22,16 @@ import DepartmentDropDown from "../DropDown/DepartmentDropDown";
 
 // Ant Design Components
 import { Dropdown, Space } from "antd";
+import Action from "../Action/Action";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
 
   return (
-    <header className="bg-slate-200 dark:bg-gray-900 flex items-center justify-between container px-5 md:px-10 h-20 sticky top-0 z-10 shadow-md dark:shadow-gray-700">
+    <header className="bg-secondary-2 dark:bg-dark-1 shadow-md flex items-center justify-between container px-5 md:px-10 h-20 sticky top-0 z-10">
       {/* Toggle */}
-      <div className="md:hidden">
+      <div className="md:hidden outline-primary p-1 rounded-md">
         <RiMenu4Fill
           className="dark:text-white text-2xl text-black"
           onClick={() => setShowMenu(!showMenu)}
@@ -43,22 +45,22 @@ const Header = () => {
       />
 
       <div className="flex items-center gap-40">
-        {/* Logo */}
+        {/* LOGO */}
         <div className="flex items-center gap-3">
-          <img src={Logo} alt="Logo" className="w-6 md:w-10" />
+          <img src={Logo} alt="Logo" className="w-6 md:w-8" />
           <span className="text-xl md:text-2xl font-extrabold dark:text-white">
             grocerymart
           </span>
         </div>
 
-        {/* Navbar */}
+        {/* MENU */}
         <nav className="hidden md:flex items-center font-semibold gap-10 dark:text-white">
           <Dropdown
             overlay={<DepartmentDropDown darkModeEnabled={darkModeEnabled} />}
             trigger={["hover"]}
           >
-            <Space>
-              Departments <FaAngleDown className="text-sm" />
+            <Space className="text-sm hover:text-blue-500 transition-colors ease-in-out duration-300 group">
+              Departments <FaAngleDown className="group-hover" />
             </Space>
           </Dropdown>
 
@@ -66,8 +68,8 @@ const Header = () => {
             overlay={<GroceryDropDown darkModeEnabled={darkModeEnabled} />}
             trigger={["hover"]}
           >
-            <Space>
-              Grocery <FaAngleDown className="text-sm" />
+            <Space className="text-sm hover:text-blue-500 transition-colors ease-in-out duration-300 group">
+              Grocery <FaAngleDown className="group-hover" />
             </Space>
           </Dropdown>
 
@@ -75,8 +77,8 @@ const Header = () => {
             overlay={<BeautyDropDown darkModeEnabled={darkModeEnabled} />}
             trigger={["hover"]}
           >
-            <Space>
-              Beauty <FaAngleDown className="text-sm" />
+            <Space className="text-sm hover:text-blue-500 transition-colors ease-in-out duration-300 group">
+              Beauty <FaAngleDown className="group-hover" />
             </Space>
           </Dropdown>
         </nav>
@@ -84,40 +86,18 @@ const Header = () => {
 
       <div className="flex items-center">
         {/* Search */}
-        <div className="hidden md:flex items-center mr-4">
-          <input
-            className="bg-white p-2 rounded-l-lg border-none dark:bg-gray-700 dark:text-white w-60 px-4 placeholder:text-slate-400"
-            type="text"
-            name="Search Products"
-            placeholder="Product name"
-            id="search"
-            style={{ boxShadow: "none" }}
-          />
-          <label
-            htmlFor="search"
-            className="bg-white p-2 rounded-r-lg inline-block dark:bg-gray-700 dark:text-white"
-          >
-            <CiSearch className="text-2xl" />
-          </label>
+        <div className="hidden md:block mr-4">
+          <Search />
         </div>
 
         {/* Actions */}
-        <div className="hidden md:flex bg-white p-[10px] px-4 rounded-lg mr-4 w-[180px] justify-between dark:bg-gray-700 dark:text-white">
-          <div className="flex items-center gap-2 border-r-[1px] border-slate-200 justify-center pr-4">
-            <LuHeart className="text-xl" />
-            <span className="text-sm font-semibold">03</span>
-          </div>
-
-          <div className="flex items-center gap-2 justify-center">
-            <BiCartAlt className="text-xl" />
-            <span className="text-sm font-semibold">$65.42</span>
-          </div>
-        </div>
+        {/* FIXME: Lỗi không thể dùng dropdown */}
+        <Action />
 
         <DarkModeToggle />
 
         {/* Avatar */}
-        <div className="w-10 h-10">
+        <div className="w-10 h-10 outline-primary rounded-md hover:outline-blue-300">
           <img src={Avatar} alt="" className="object-fill" />
         </div>
       </div>
