@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Breadcrumb, Select, Tabs, ConfigProvider } from "antd";
+import { Select, Tabs, ConfigProvider } from "antd";
 
 // React Icons
 import { PiStarFill } from "react-icons/pi";
 import { CgNotes } from "react-icons/cg";
 import { BiCartAlt } from "react-icons/bi";
 import { IoBagCheckOutline } from "react-icons/io5";
-import { LuHeart } from "react-icons/lu";
 
 import Item4 from "../../assets/images/item-4.png";
 import Comment from "../../components/Comment/Comment";
@@ -39,6 +38,13 @@ const TabsWrapper = styled(Tabs)`
 
 // Hooks
 import useMediaQuery from "../../hook/useMediaQuery/useMediaQuery.js";
+import AntBreadcrumb from "../../components/Breadcrumb/Breadcrumb.jsx";
+import { Link } from "react-router-dom";
+import Label from "../../components/Label/Label.jsx";
+import Button from "../../components/Button/Button.jsx";
+import { useState } from "react";
+import { RiHeartFill, RiHeartLine } from "react-icons/ri";
+import Search from "../../components/Search/Search.jsx";
 
 // Tabs content
 const items = [
@@ -67,38 +73,43 @@ const items = [
 const Product = () => {
   const isMobile = useMediaQuery(768);
   const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
+  const [isLiked, setIsLiked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleLikeToggle = () => {
+    setIsLiked(!isLiked);
+  };
   return (
-    <section className="container mx-auto bg-white py-8 px-6 md:px-8 dark:bg-gray-800">
-      {/* Breadcrumb */}
-      <div className="bg-gray-100 py-4 px-5 rounded-lg dark:bg-gray-900">
-        <ConfigProvider
-          theme={{
-            components: {
-              Breadcrumb: {
-                lastItemColor: darkModeEnabled ? "#fff" : "#000",
-                separatorColor: darkModeEnabled ? "#fff" : "rgb(156 163 175)",
-                separatorMargin: isMobile ? 5 : 15,
-              },
-            },
-          }}
-        >
-          <Breadcrumb
-            className="font-semibold dark:text-gray-400"
-            items={[
-              { title: "Departments" },
-              { title: "Coffee" },
-              { title: "Coffee Beans" },
-              { title: "LavAzza" },
-            ]}
-          />
-        </ConfigProvider>
+    <section className="section">
+      {/* SEARCH */}
+      <div className="md:hidden">
+        <Search
+          placeholder="Search for item"
+          bgColor="dark:bg-dark-1 bg-secondary-1"
+          rounded="rounded-lg"
+          margin="mb-4"
+          padding="py-3"
+        />
       </div>
+
+      {/* Breadcrumb */}
+      {/* FIXME: The color of the text must be white in dark mode! */}
+      <AntBreadcrumb
+        items={[
+          {
+            title: <Link to="/">Home</Link>,
+          },
+          { title: "Coffee" },
+          { title: "Coffee Beans" },
+          { title: "LavAzza" },
+        ]}
+      />
       {/* Product */}
-      <div className="flex md:flex-row flex-col md:mt-2 items-center bg-gray-100 dark:bg-gray-900 md:dark:bg-gray-800 md:bg-white rounded-lg md:rounded-none mt-6">
-        <div className="md:w-[40%] p-4 md:p-10">
-          <img src={Item4} alt="" className="w-full" />
+      <div className="flex md:flex-row flex-col md:mt-6 items-center md:dark:bg-transparent dark:bg-dark-1 rounded-lg md:rounded-none mt-4">
+        <div className="md:w-[40%] flex justify-center">
+          <img src={Item4} alt="" className="w-[90%]" />
         </div>
-        <div className="md:w-[60%] p-4 md:p-10 bg-gray-100 rounded-2xl md:rounded-lg h-fit dark:bg-gray-900 dark:text-white">
+        <div className="md:w-[60%] p-4 md:p-10 bg-secondary-1 rounded-2xl md:rounded-lg h-fit dark:bg-dark-1 dark:text-dark-s-2">
           <h1 className="md:text-3xl text-lg md:font-bold font-extrabold">
             Coffee Beans - Espresso Arabica and Robusta Beans
           </h1>
@@ -144,33 +155,9 @@ const Product = () => {
                     $darkModeEnabled={darkModeEnabled}
                   />
                   <div className="flex items-center justify-between my-5">
-                    <span
-                      className={`label ${
-                        darkModeEnabled
-                          ? "bg-slate-600 text-gray-300 hover:bg-slate-800"
-                          : "bg-slate-200"
-                      }`}
-                    >
-                      Small
-                    </span>
-                    <span
-                      className={`label ${
-                        darkModeEnabled
-                          ? "bg-slate-600 text-gray-300 hover:bg-slate-800"
-                          : "bg-slate-200"
-                      }`}
-                    >
-                      Medium
-                    </span>
-                    <span
-                      className={`label ${
-                        darkModeEnabled
-                          ? "bg-slate-600 text-gray-300 hover:bg-slate-800"
-                          : "bg-slate-200"
-                      }`}
-                    >
-                      Large
-                    </span>
+                    <Label children="Small" bgColor="bg-secondary-2" />
+                    <Label children="Medium" bgColor="bg-secondary-2" />
+                    <Label children="Large" bgColor="bg-secondary-2" />
                   </div>
                 </div>
               </div>
@@ -205,11 +192,24 @@ const Product = () => {
                   $540.00
                 </div>
                 <div className="flex items-center gap-4">
-                  <button className="outline-none border-none px-3 py-2 rounded-md bg-yellow-400 w-full">
-                    Add to cart
-                  </button>
-                  <button className="outline-none p-2 border-2 rounded-md">
-                    <LuHeart className="text-lg" />
+                  <Button children="Add to cart" padding="py-2" />
+                  <button
+                    className="p-[10px] border-2 rounded-md outline-primary"
+                    onClick={handleLikeToggle}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    {isHovered ? (
+                      isLiked ? (
+                        <RiHeartFill className="text-xl text-red-500" />
+                      ) : (
+                        <RiHeartLine className="text-xl text-red-500" />
+                      )
+                    ) : isLiked ? (
+                      <RiHeartFill className="text-xl text-red-500" />
+                    ) : (
+                      <RiHeartLine className="text-xl" />
+                    )}
                   </button>
                 </div>
               </div>

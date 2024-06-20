@@ -1,5 +1,11 @@
+import useMediaQuery from "../../hook/useMediaQuery/useMediaQuery";
 // images
-import Banner from "../../assets/images/Banner.svg";
+import Banner1 from "../../assets/images/Banner.svg";
+import Banner2 from "../../assets/images/Banner2.svg";
+import Banner3 from "../../assets/images/Banner3.svg";
+import Banners1 from "../../assets/images/Banner-s-1.svg";
+import Banners2 from "../../assets/images/Banner-s-2.svg";
+import Banners3 from "../../assets/images/Banner-s-3.svg";
 
 // Icons
 import { MdFilterList } from "react-icons/md";
@@ -11,11 +17,12 @@ import { categories, products } from "../../data/data";
 import Filter from "../../components/Filter/Filter";
 
 // Ant Design Components
-import { Dropdown, Space } from "antd";
+import { Dropdown, Space, Carousel } from "antd";
 import Product from "../../components/Product/Product";
 import Category from "../../components/Category/Category";
 
 const Home = () => {
+  const isMobile = useMediaQuery(768);
   return (
     <section className="container mx-auto bg-secondary-1 md:py-8 py-6 md:px-8 px-6 dark:bg-dark-2 flex flex-col md:flex-row gap-8 gap-y-1">
       <div className="md:w-[15vw] w-[100%]">
@@ -30,13 +37,45 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="md:w-[85vw]">
+      <div className="md:w-[80vw]">
         {/* BANNER */}
-        <img
-          src={Banner}
-          alt="Order your favorite coffee"
-          className="w-[100%] md:rounded-3xl mx-auto shadow-custom"
-        />
+        {isMobile ? (
+          <Carousel autoplay>
+            <img
+              src={Banners1}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+            <img
+              src={Banners2}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+            <img
+              src={Banners3}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+          </Carousel>
+        ) : (
+          <Carousel autoplay>
+            <img
+              src={Banner1}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+            <img
+              src={Banner2}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+            <img
+              src={Banner3}
+              alt="Order your favorite coffee"
+              className="w-[100%] md:rounded-3xl mx-auto"
+            />
+          </Carousel>
+        )}
 
         {/* BEST SELLER */}
         <div className=" mt-6">
@@ -46,6 +85,7 @@ const Home = () => {
               Total LavAzza 1320
             </h3>
             {/* FILTER */}
+            {/* FIXME: This code is not optimized! */}
             <Dropdown overlay={<Filter />} trigger={["hover"]}>
               <Space>
                 <div className="bg-white w-fit p-2 px-3 rounded-lg flex items-center gap-4 dark:bg-dark-1 dark:text-white shadow-custom">

@@ -1,8 +1,22 @@
 import { CiSearch } from "react-icons/ci";
 
-const Search = ({ placeholder }) => {
+const Search = ({
+  placeholder,
+  bgColor,
+  rounded,
+  margin,
+  padding,
+  ...props
+}) => {
   return (
-    <div className="flex items-center gap-2 p-2 px-4 rounded-md bg-white dark:bg-dark-2 dark:text-white outline-primary">
+    <div
+      className={`flex items-center justify-between gap-2 p-2 px-4 dark:text-white outline-primary ${
+        bgColor ? bgColor : "dark:bg-dark-2 bg-white"
+      } ${rounded ? rounded : "rounded-md"} ${margin ? margin : ""} ${
+        padding ? padding : ""
+      }`}
+      {...props}
+    >
       <input
         className="bg-transparent border-none focus:outline-none text-dark-s-2"
         type="text"

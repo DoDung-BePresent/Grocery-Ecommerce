@@ -6,27 +6,31 @@ import { CiEdit } from "react-icons/ci";
 import { useSelector } from "react-redux";
 
 import Brand from "../../assets/images/Fedex-logo.png";
+import Shipping from "../../components/Shipping/Shipping";
+
+import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 
 const Payment = () => {
   const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
 
   return (
-    <section className="container mx-auto bg-white py-8 px-6 md:px-8 dark:bg-gray-800">
+    <section className="container mx-auto bg-white py-8 px-6 md:px-8 dark:bg-dark-2">
       {/* Search */}
       <div className="md:hidden">
         <Search
-          placeholder="Search products"
-          bgColor="bg-gray-100"
-          margin="mb-6"
-          padding="p-3"
-          darkMode="dark:bg-gray-900"
+          placeholder="Search for item"
+          bgColor="dark:bg-dark-1 bg-secondary-1"
+          rounded="rounded-lg"
+          margin="mb-4"
+          padding="py-3"
         />
       </div>
 
       {/* Breadcrumb */}
       <AntBreadcrumb
         items={[
-          { title: "Home" },
+          { title: <Link to="/">Home</Link> },
           { title: "Checkout" },
           { title: "Shipping" },
           { title: "Payment method" },
@@ -37,22 +41,22 @@ const Payment = () => {
         {/* LEFT */}
         <div className="flex flex-col md:w-[70%]">
           {/* PART1 */}
-          <div className="bg-gray-100 dark:bg-gray-900 px-5 pb-5 mt-6 rounded-lg">
+          <div className="bg-secondary-1 dark:bg-dark-1 px-5 pb-5 mt-6 rounded-lg">
             <div className="flex items-center justify-between">
-              <h1 className="md:text-2xl font-bold my-6">
+              <h1 className="text-sm md:text-xl font-bold my-6 dark:text-dark-s-2 pr-3">
                 1. Shipping, arrives between Mon, May 16-Tue, May 24
               </h1>
-              <div className="flex items-center gap-2 text-black dark:text-slate-400">
+              <div className="flex items-center gap-2 text-dark-2 dark:text-dark-s-2 hover:text-blue-400 transition-colors ease-in-out duration-300">
                 <CiEdit className="text-xl" />
                 <span>Edit</span>
               </div>
             </div>
             <div>
               <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between bg-white dark:bg-gray-800 p-3 px-6 rounded-xl">
-                  <div>
-                    <h3 className="font-bold md:text-lg">Imran Khan</h3>
-                    <p className="text-sm">
+                <div className="flex items-center justify-between bg-white dark:bg-dark-2 p-3 px-6 rounded-xl">
+                  <div className="pr-3">
+                    <h3 className="font-bold text-sm md:text-md">Imran Khan</h3>
+                    <p className="text-xs">
                       Museum of Rejas, Sylhet Sadar, Sylhet 3100.
                     </p>
                   </div>
@@ -70,128 +74,77 @@ const Payment = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between bg-white dark:bg-gray-800 p-3 px-6 rounded-xl">
+                <div className="flex items-center justify-between bg-white dark:bg-dark-2 p-3 px-6 rounded-xl">
                   <div>
-                    <h3 className="font-bold md:text-lg">Imran Khan</h3>
-                    <p className="text-sm">
-                      2 items.
-                    </p>
+                    <h3 className="font-bold text-sm md:text-md">Imran Khan</h3>
+                    <p className="text-xs">2 items.</p>
                   </div>
-                  <h3 className="text-slate-600 dark:text-slate-400 text-sm">View details</h3>
+                  <h3 className="text-dark-2 dark:text-dark-s-2 hover:text-blue-400 transition-colors ease-in-out duration-300 text-sm">
+                    View details
+                  </h3>
                 </div>
               </div>
             </div>
           </div>
 
           {/* PART2 */}
-          <div className="bg-gray-100 dark:bg-gray-900 px-5 pb-5 mt-6 rounded-lg flex flex-col divide-y-2">
+          <div className="bg-secondary-1 dark:bg-dark-1 px-5 pb-5 mt-6 rounded-lg flex flex-col divide-y-2">
             <div className="flex items-center justify-between">
-              <h1 className="md:text-2xl font-bold my-6">2. Shipping method</h1>
+              <h1 className="text-sm md:text-xl font-bold my-5 md:my-6">
+                2. Shipping method
+              </h1>
             </div>
             <div className="">
-              <h3 className="font-bold my-6">Available Shipping method</h3>
+              <h3 className="font-bold text-sm my-6">
+                Available Shipping method
+              </h3>
               <div className="flex flex-col gap-4">
-                <div className="flex md:flex-row flex-col gap-3 md:gap-0 items-center justify-between bg-white dark:bg-gray-800 p-3 px-6 rounded-xl">
-                  <div className="flex items-start md:items-center gap-4">
-                    <div className="rounded-lg mt-2">
-                      <img
-                        src={Brand}
-                        alt=""
-                        className="w-16 h-10 object-cover rounded-lg"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">Fedex Delivery</h3>
-                      <p className="text-sm">Delivery: 2-3 days work</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <span className="font-bold">Free</span>
-                    <ConfigProvider
-                      theme={{
-                        token: {
-                          colorBgContainer: "transparent",
-                          colorBorder: darkModeEnabled ? "#fff" : "#000",
-                        },
-                      }}
-                    >
-                      <Checkbox />
-                    </ConfigProvider>
-                  </div>
-                </div>
-
-                <div className="flex md:flex-row flex-col gap-3 md:gap-0 items-center justify-between bg-white dark:bg-gray-800 p-3 px-6 rounded-xl">
-                  <div className="flex items-start md:items-center gap-4">
-                    <div className="rounded-lg mt-2">
-                      <img
-                        src={Brand}
-                        alt=""
-                        className="w-16 h-10 object-cover rounded-lg"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg">Fedex Delivery</h3>
-                      <p className="text-sm">Delivery: 2-3 days work</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <span className="font-bold">Free</span>
-                    <ConfigProvider
-                      theme={{
-                        token: {
-                          colorBgContainer: "transparent",
-                          colorBorder: darkModeEnabled ? "#fff" : "#000",
-                        },
-                      }}
-                    >
-                      <Checkbox />
-                    </ConfigProvider>
-                  </div>
-                </div>
+                <Shipping
+                  image={Brand}
+                  name="Fedex Delivery"
+                  shipTime="2-3 days work"
+                  price="Free"
+                  darkModeEnabled={darkModeEnabled}
+                />
+                <Shipping
+                  image={Brand}
+                  name="Fedex Delivery"
+                  shipTime="2-3 days work"
+                  price="Free"
+                  darkModeEnabled={darkModeEnabled}
+                />
               </div>
             </div>
           </div>
         </div>
 
         {/* RIGHT */}
-        <div className="md:mt-6 p-5 md:w-[30%] h-fit bg-gray-100 dark:bg-gray-900 rounded-lg text-sm">
+        <div className="md:mt-6 p-5 md:w-[30%] h-fit bg-secondary-1 dark:bg-dark-1 rounded-lg text-sm">
           <div>
-            <div>
-              <h3 className="font-bold text-xl">Payment details</h3>
-              <p>
+            <div className="mb-4">
+              <h3 className="font-bold text-md md:text-xl">Payment details</h3>
+              <p className="my-2">
                 Complete your purchase item by providing your payment details
                 order
               </p>
             </div>
             <div>
-              <div className="my-4">
-                <h3 className="font-bold text-base mb-2">Email Address</h3>
-                <input
-                  placeholder="example@gmail.com"
-                  type="email"
-                  className="p-2 px-4 border-2 rounded-lg w-full text-base focus:outline-blue-300 dark:bg-transparent"
-                />
+              <div className="my-2">
+                <h3 className="font-bold text-sm">Email Address</h3>
+                <Input placeholder="example@gmail.com" />
               </div>
 
-              <div className="my-4">
-                <h3 className="font-bold text-base mb-2">Card Holder</h3>
-                <input
-                  placeholder="example@gmail.com"
-                  type="text"
-                  className="p-2 px-4 border-2 rounded-lg w-full text-base focus:outline-blue-300 dark:bg-transparent"
-                />
+              <div className="my-2">
+                <h3 className="font-bold text-sm">Card Holder</h3>
+                <Input placeholder="Your Name" />
               </div>
 
-              <div className="my-4">
-                <h3 className="font-bold text-base mb-2">Card Details</h3>
-                <input
-                  placeholder="example@gmail.com"
-                  type="text"
-                  className="p-2 px-4 border-2 rounded-lg w-full text-base focus:outline-blue-300 dark:bg-transparent"
-                />
+              <div className="my-2">
+                <h3 className="font-bold text-sm">Card Details</h3>
+                <Input placeholder="**** **** **** ****" />
               </div>
 
-              <div className="my-4 flex border-2 rounded-lg overflow-hidden">
+              <div className="my-2 mb-6 flex border-2 rounded-lg overflow-hidden outline-primary">
                 <input
                   placeholder="MM/YY"
                   type="text"
@@ -205,8 +158,8 @@ const Payment = () => {
               </div>
             </div>
           </div>
-          <div className="font-semibold">
-            <div className="flex flex-col gap-2">
+          <div className="font-semibold divide-y-2">
+            <div className="flex flex-col gap-3">
               <div className="flex items-center justify-between">
                 <span>Subtotal (items)</span>
                 <span>3</span>
@@ -215,21 +168,19 @@ const Payment = () => {
                 <span>Price (Total)</span>
                 <span>$191.65</span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-4">
                 <span>Shipping</span>
                 <span>$10.00</span>
               </div>
             </div>
-            <div className="pt-3 flex flex-col gap-2">
+            <div className="py-4">
               <div className="flex items-center justify-between">
                 <span>Estimated Total</span>
                 <span>$201.65</span>
               </div>
             </div>
-            <Link className="font-bold outline-none text-lg border-none px-3 py-2 rounded-md bg-yellow-400 dark:text-black w-full mt-4 block text-center">
-              Pay $201.65
-            </Link>
           </div>
+          <Button children="Pay $201.65" padding="py-2" textSize="text-lg" />
         </div>
       </div>
     </section>

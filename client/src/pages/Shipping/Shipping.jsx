@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Checkbox, ConfigProvider } from "antd";
 import { FaAngleLeft } from "react-icons/fa6";
 import Search from "../../components/Search/Search";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
@@ -7,28 +6,29 @@ import AntBreadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 // React Icons
 import { CiSquarePlus } from "react-icons/ci";
-import { CiEdit } from "react-icons/ci";
 import { useSelector } from "react-redux";
+import Address from "../../components/Address/Address";
+import Button from "../../components/Button/Button";
 
 const Shipping = () => {
   const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
   return (
-    <section className="container mx-auto bg-white py-8 px-6 md:px-8 dark:bg-gray-800">
+    <section className="section">
       {/* Search */}
       <div className="md:hidden">
         <Search
-          placeholder="Search products"
-          bgColor="bg-gray-100"
-          margin="mb-6"
-          padding="p-3"
-          darkMode="dark:bg-gray-900"
+          placeholder="Search for item"
+          bgColor="dark:bg-dark-1 bg-secondary-1"
+          rounded="rounded-lg"
+          margin="mb-4"
+          padding="py-3"
         />
       </div>
 
       {/* Breadcrumb */}
       <AntBreadcrumb
         items={[
-          { title: "Home" },
+          { title: <Link to="/">Home</Link> },
           { title: "Checkout" },
           { title: "Shipping" },
         ]}
@@ -36,9 +36,9 @@ const Shipping = () => {
 
       {/* Checkout Items */}
       <div className="flex md:flex-row flex-col gap-6 dark:text-gray-300">
-        <div className="flex flex-col px-5 bg-gray-100 dark:bg-gray-900 mt-6 md:w-[70%] rounded-lg">
+        <div className="flex flex-col px-5 bg-secondary-1 dark:bg-dark-1 mt-6 md:w-[70%] rounded-lg">
           {/* Shipping Address */}
-          <div className="flex flex-col divide-y-2 divide-black">
+          <div className="flex flex-col divide-y-2 divide-dark-s-1">
             <div>
               <h1 className="md:text-2xl font-bold my-6">
                 1. Shipping, arrives between Mon, May 16-Tue, May 24
@@ -51,80 +51,34 @@ const Shipping = () => {
                   <p className="text-sm">Where should we deliver your order?</p>
                 </div>
                 <div>
-                  <button className="outline-none border-none flex gap-2 items-center px-3 py-2 rounded-md bg-yellow-400 dark:text-black">
-                    <CiSquarePlus className="text-lg" />
-                    <span className="font-bold">Add a new address</span>
-                  </button>
+                  <Button
+                    children={
+                      <div className="flex items-center gap-2 justify-center">
+                        <CiSquarePlus className="text-lg" />
+                        <span className="font-bold">Add a new address</span>
+                      </div>
+                    }
+                    padding="py-2"
+                  />
                 </div>
               </div>
 
               {/* List Address */}
               <div className="flex flex-col gap-4">
-                <div className="flex gap-4 items-start">
-                  <div className="mt-[1px]">
-                    <ConfigProvider
-                      theme={{
-                        token: {
-                          colorBgContainer: "transparent",
-                          colorBorder: darkModeEnabled ? "#fff" : "#000",
-                        },
-                      }}
-                    >
-                      <Checkbox />
-                    </ConfigProvider>
-                  </div>
-                  <div className="flex flex-col gap-3 w-full">
-                    <div>
-                      <h3 className="font-bold text-lg">Imran Khan</h3>
-                      <p className="text-sm">
-                        Museum of Rejas, Sylhet Sadar, Sylhet 3100.
-                      </p>
-                    </div>
-                    <div className="flex md:flex-row flex-col md:items-center justify-between text-slate-600 dark:text-slate-400 gap-4 md:gap-0">
-                      <div className="text-sm flex md:flex-row flex-col md:items-center md:gap-5">
-                        <li>Shipping</li>
-                        <li>Delivery from store</li>
-                      </div>
-                      <div className="flex items-center gap-2 text-black dark:text-slate-400">
-                        <CiEdit className="text-xl" />
-                        <span>Edit</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 items-start">
-                  <div className="mt-[1px]">
-                    <ConfigProvider
-                      theme={{
-                        token: {
-                          colorBgContainer: "transparent",
-                          colorBorder: darkModeEnabled ? "#fff" : "#000",
-                        },
-                      }}
-                    >
-                      <Checkbox />
-                    </ConfigProvider>
-                  </div>
-                  <div className="flex flex-col gap-3 w-full">
-                    <div>
-                      <h3 className="font-bold text-lg">Imran Khan</h3>
-                      <p className="text-sm">
-                        Museum of Rejas, Sylhet Sadar, Sylhet 3100.
-                      </p>
-                    </div>
-                    <div className="flex md:flex-row flex-col md:items-center justify-between text-slate-600 dark:text-slate-400 gap-4 md:gap-0">
-                      <div className="text-sm flex md:flex-row flex-col md:items-center md:gap-5">
-                        <li>Shipping</li>
-                        <li>Delivery from store</li>
-                      </div>
-                      <div className="flex items-center gap-2 text-black dark:text-slate-400">
-                        <CiEdit className="text-xl" />
-                        <span>Edit</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Address
+                  darkModeEnabled={darkModeEnabled}
+                  title="Imran Khan"
+                  des="Museum of Rejas, Sylhet Sadar, Sylhet 3100."
+                  status="Shipping"
+                  method="Delivery from store"
+                />
+                <Address
+                  darkModeEnabled={darkModeEnabled}
+                  title="Imran Khan"
+                  des="Museum of Rejas, Sylhet Sadar, Sylhet 3100."
+                  status="Shipping"
+                  method="Delivery from store"
+                />
               </div>
             </div>
           </div>
@@ -138,21 +92,20 @@ const Shipping = () => {
           </div>
 
           <div className="py-4 md:flex hidden gap-4 items-center justify-between">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 hover:text-blue-400 transition-colors ease-in-out duration-300">
               <FaAngleLeft />
-              <Link className="text-black dark:text-gray-300 font-bold" to="/">
+              <Link
+                className="text-black dark:text-gray-300 font-bold hover:text-blue-400 transition-colors ease-in-out duration-300"
+                to="/"
+              >
                 Continue Shopping
               </Link>
             </div>
-            <div className="">
-              <button className="font-bold outline-none border-none px-3 py-2 rounded-md bg-yellow-400 dark:text-black w-40">
-                Continue
-              </button>
-            </div>
+            <Button children="Continue" padding="py-2" width="w-40" to="/checkout/shipping/payment" />
           </div>
         </div>
 
-        <div className="md:mt-6 divide-y-2 p-5 md:w-[30%] h-fit bg-gray-100 dark:bg-gray-900 rounded-lg font-semibold text-sm">
+        <div className="md:mt-6 divide-y-2 p-5 md:w-[30%] h-fit bg-secondary-1 dark:bg-dark-1 rounded-lg font-semibold text-sm">
           <div className="flex flex-col gap-2 mb-2">
             <div className="flex items-center justify-between">
               <span>Subtotal (items)</span>
@@ -172,10 +125,10 @@ const Shipping = () => {
               <span>Estimated Total</span>
               <span>$201.65</span>
             </div>
+            <div className="md:hidden">
+              <Button children="Continue to checkout" padding="py-2" />
+            </div>
           </div>
-          <Link className="font-bold md:hidden outline-none border-none px-3 py-2 rounded-md bg-yellow-400 dark:text-black w-full mt-4 block text-center">
-            Continue to checkout
-          </Link>
         </div>
       </div>
     </section>

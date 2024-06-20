@@ -19,21 +19,10 @@ const Comment = () => {
     <div className="dark:text-white">
       <h3 className="text-lg font-bold mb-5">What our customers are saying</h3>
       <div className="flex md:flex-row flex-col items-center gap-6 md:snap-x snap-y md:overflow-x-auto overflow-y-auto snap-proximity w-full custom-scrollbar">
-        <style>
-          {`
-          .custom-scrollbar::-webkit-scrollbar {
-            display: none;
-          }
-          .custom-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-          }
-        `}
-        </style>
         {comments.map((comment) => (
           <div
             key={comment.id}
-            className="flex flex-col gap-4 bg-slate-50 p-4 rounded-lg w-full md:w-fit snap-center flex-shrink-0 dark:bg-gray-900"
+            className="flex flex-col gap-4 bg-[#FAFAFD] p-4 px-6 md:my-4 mt-2 rounded-lg w-full md:w-[400px] snap-center flex-shrink-0 dark:bg-dark-1 shadow-custom"
           >
             <div className="flex items-center justify-between">
               <div className="w-[25%]">
@@ -46,13 +35,13 @@ const Comment = () => {
               <div className="w-[75%]">
                 <h4 className="text-lg">{comment.username}</h4>
                 <p className="text-md font-normal mt-1">
-                  {comment.comment.length > 41
-                    ? comment.comment.substring(0, 41) + "..."
+                  {comment.comment.length > 35
+                    ? comment.comment.substring(0, 35) + "..."
                     : comment.comment}
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-black dark:text-white">
+            <div className="flex items-center gap-4 text-dark-1 dark:text-white">
               <Flex gap="middle" vertical>
                 <RateWrapper
                   className="text-[17px]"

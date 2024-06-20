@@ -8,8 +8,11 @@ const { Search } = Input;
 import { IoTriangleSharp } from "react-icons/io5";
 import { useSelector } from "react-redux";
 
-// Style Components
+// Components
+import Label from "../Label/Label";
+import Button from "../Button/Button";
 
+// Style Components
 const InputWrapper = styled(Input)`
   &.ant-input-outlined {
     background: transparent !important;
@@ -125,29 +128,36 @@ const Filter = () => {
   };
 
   return (
-    <div
-      className={`absolute z-10 w-[82vw] md:w-[70vw] right-0 p-5 rounded-2xl shadow-2xl mt-3 ${
-        darkModeEnabled ? "bg-gray-800 shadow-black text-white" : "bg-white"
-      }`}
-    >
-      <IoTriangleSharp
-        className={`text-4xl absolute -top-4 right-10 ${
-          darkModeEnabled ? "text-gray-800" : "text-white"
-        }`}
-      />
+    <div className="absolute z-10 w-[82vw] md:w-[70vw] right-0 p-5 rounded-2xl shadow-2xl mt-3 bg-white dark:bg-dark-1 shadow-custom dark:text-white">
+      <IoTriangleSharp className="text-4xl absolute -top-4 right-10 dark:text-dark-1 text-white" />
       <h1 className="font-bold text-xl mb-4">Filter</h1>
       <div className="grid grid-rows-3 divide-y items-center md:grid-cols-3 md:divide-x md:grid-rows-none md:divide-y-0">
         {/* Price */}
         <div className="md:pr-5">
           <h1 className="font-bold text-xl mb-6">Price</h1>
 
-          <Slider
-            range
-            value={[minPrice, maxPrice]}
-            onChange={onSliderChange}
-            min={0}
-            max={10000}
-          />
+          <ConfigProvider
+            theme={{
+              components: {
+                Slider: {
+                  railBg: `${
+                    darkModeEnabled ? "#9E9DA8" : "rgba(0, 0, 0, 0.04)"
+                  }`,
+                  railHoverBg: `${
+                    darkModeEnabled ? "#9E9DA8" : "rgba(0, 0, 0, 0.04)"
+                  }`,
+                },
+              },
+            }}
+          >
+            <Slider
+              range
+              value={[minPrice, maxPrice]}
+              onChange={onSliderChange}
+              min={0}
+              max={10000}
+            />
+          </ConfigProvider>
           <div className="flex items-center gap-10 mt-2">
             <div className="flex flex-col gap-3">
               <span>Minimum</span>
@@ -211,27 +221,9 @@ const Filter = () => {
             $darkModeEnabled={darkModeEnabled}
           />
           <div className="flex items-center justify-between my-5">
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Small
-            </span>
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Medium
-            </span>
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Large
-            </span>
+            <Label children="Small" />
+            <Label children="Medium" />
+            <Label children="Large" />
           </div>
         </div>
         {/* Brand */}
@@ -259,35 +251,17 @@ const Filter = () => {
             />
           </ConfigProvider>
           <div className="flex items-center justify-between my-5">
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Lavazza
-            </span>
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Nescafe
-            </span>
-            <span
-              className={`label ${
-                darkModeEnabled ? "bg-gray-900 text-gray-300" : ""
-              }`}
-            >
-              Starbucks
-            </span>
+            <Label children="Lavazza" />
+            <Label children="Nescafe" />
+            <Label children="Starbucks" />
           </div>
         </div>
       </div>
       <div className="flex items-center gap-4 justify-end md:mr-5 mt-3">
-        <button className="text-gray-500 font-semibold">Cancel</button>
-        <button className="bg-blue-500 p-2 px-3 rounded-lg text-black font-semibold">
-          Show Result
+        <button className="text-dark-1 dark:text-dark-l-2 hover:text-dark-s-1 font-semibold">
+          Cancel
         </button>
+        <Button children="Show Result" width="w-fit" padding="py-2" />
       </div>
     </div>
   );

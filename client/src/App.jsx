@@ -1,4 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 // components
 import Layout from "./components/Layout/Layout";
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "/product", element: <Product /> },
+      { path: "/product/:id", element: <Product /> },
       { path: "/checkout", element: <Checkout /> },
       { path: "/checkout/shipping", element: <Shipping /> },
       { path: "/checkout/shipping/payment", element: <Payment /> },
@@ -28,7 +30,23 @@ const router = createBrowserRouter([
   },
 ]);
 
+const setDarkModeClass = (enabled) => {
+  if (enabled) {
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.theme = "light";
+  }
+};
+
 function App() {
+  const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
+
+  useEffect(() => {
+    setDarkModeClass(darkModeEnabled);
+  }, [darkModeEnabled]);
+
   return <RouterProvider router={router} />;
 }
 

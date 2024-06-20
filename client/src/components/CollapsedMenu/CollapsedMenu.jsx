@@ -404,7 +404,7 @@ const CollapsedMenu = ({ showMenu, handleShowMenu }) => {
   ];
 
   return (
-    <div>
+    <div className="md:hidden">
       {/* Overlay */}
       {showMenu && (
         <div

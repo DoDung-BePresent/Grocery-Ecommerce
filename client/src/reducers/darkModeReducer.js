@@ -1,7 +1,7 @@
 import { TOGGLE_DARK_MODE } from "../actions/darkModeActions";
 
 const initialState = {
-  enabled: false,
+  enabled: localStorage.theme === "dark" ? true : false,
 };
 
 const darkModeReducer = (state = initialState, action) => {
