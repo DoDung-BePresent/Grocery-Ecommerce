@@ -1,0 +1,1696 @@
+{
+  "coffees": [
+    {
+      "_id": "6424335b59f9f6fdd657d2e1",
+      "id": 1,
+      "name": "Signature Blend",
+      "brand": "lavAzza",
+      "description": "A rich, full-bodied coffee with notes of dark chocolate and black cherry. Grown on the slopes of a mist-covered mountain in Central America.",
+      "price": 12.99,
+      "rating": 4.2,
+      "region": "Central America",
+      "isLiked": false,
+      "weight": 500,
+      "flavor_profile": ["Dark Chocolate", "Black Cherry"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Very unhappy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "John Doe",
+          "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nolan Gonzalez",
+          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Scarlett Wright",
+          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Nora Russell",
+          "reviewerEmail": "nora.russell@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Dylan Wells",
+          "reviewerEmail": "dylan.wells@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Noah Hernandez",
+          "reviewerEmail": "noah.hernandez@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://iili.io/H8Y78Qt.webp"
+    },
+    {
+      "_id": "6424338559f9f6fdd657d2e2",
+      "id": 2,
+      "name": "Golden Sunrise",
+      "brand": "lavAzza",
+      "description": "A smooth and bright coffee with a citrusy kick. Sourced from the rolling hills of Africa.",
+      "price": 10.99,
+      "rating": 4.6,
+      "region": "Africa",
+      "isLiked": true,
+      "weight": 300,
+      "flavor_profile": ["Citrus"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Liam Garcia",
+          "reviewerEmail": "liam.garcia@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Nora Russell",
+          "reviewerEmail": "nora.russell@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Elena Baker",
+          "reviewerEmail": "elena.baker@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Leo Rivera",
+          "reviewerEmail": "leo.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not worth the price!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ethan Martinez",
+          "reviewerEmail": "ethan.martinez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Max Parker",
+          "reviewerEmail": "max.parker@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 2,
+      "image_url": "https://iili.io/H8Y7WEg.webp"
+    },
+    {
+      "_id": "6424338959f9f6fdd657d2e3",
+      "id": 3,
+      "name": "Rainforest Rhapsody",
+      "brand": "lavAzza",
+      "description": "An earthy and complex coffee with notes of toasted nuts and caramel. Sustainably grown in the rainforests of South America.",
+      "price": 14.99,
+      "rating": 4,
+      "region": "South America",
+      "isLiked": true,
+      "weight": 400,
+      "flavor_profile": ["Citrus"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Ethan Thompson",
+          "reviewerEmail": "ethan.thompson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Levi Hicks",
+          "reviewerEmail": "levi.hicks@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.618Z",
+          "reviewerName": "Hazel Gardner",
+          "reviewerEmail": "hazel.gardner@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Elena Baker",
+          "reviewerEmail": "elena.baker@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madeline Simpson",
+          "reviewerEmail": "madeline.simpson@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Caleb Nelson",
+          "reviewerEmail": "caleb.nelson@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 2,
+      "image_url": "https://iili.io/H8Y7kTN.webp"
+    },
+    {
+      "_id": "6424338c59f9f6fdd657d2e4",
+      "id": 4,
+      "name": "Harvest Moon",
+      "brand": "lavAzza",
+      "description": "A smooth and earthy blend with notes of cocoa and hazelnut.",
+      "price": 9.99,
+      "rating": 4.4,
+      "region": "Central America",
+      "isLiked": false,
+      "weight": 500,
+      "flavor_profile": ["Cocoa", "Hazelnut"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Leo Rivera",
+          "reviewerEmail": "leo.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Oscar Powers",
+          "reviewerEmail": "oscar.powers@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Carter Rivera",
+          "reviewerEmail": "carter.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Nicholas Bailey",
+          "reviewerEmail": "nicholas.bailey@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Awesome product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Gabriel Hayes",
+          "reviewerEmail": "gabriel.hayes@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "James Garcia",
+          "reviewerEmail": "james.garcia@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://iili.io/H8Y7X4a.webp"
+    },
+    {
+      "_id": "6424352d59f9f6fdd657d2e6",
+      "id": 5,
+      "name": "Wildfire",
+      "brand": "lavAzza",
+      "description": "A bold and smoky blend with notes of dark chocolate and molasses.",
+      "price": 12.99,
+      "rating": 4.7,
+      "region": "Africa",
+      "isLiked": true,
+      "weight": 200,
+      "flavor_profile": ["Dark Chocolate", "Molasses"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Leo Rivera",
+          "reviewerEmail": "leo.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Evan Reed",
+          "reviewerEmail": "evan.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Evelyn Sanchez",
+          "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Disappointing product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mateo Bennett",
+          "reviewerEmail": "mateo.bennett@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Natalie Price",
+          "reviewerEmail": "natalie.price@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Avery Barnes",
+          "reviewerEmail": "avery.barnes@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 5,
+      "image_url": "https://iili.io/H8Y7r4s.webp"
+    },
+    {
+      "_id": "6424353059f9f6fdd657d2e7",
+      "id": 6,
+      "name": "Walnut Wonder",
+      "brand": "lavAzza",
+      "description": "A smooth and nutty coffee from the slopes of South America.",
+      "price": 9.99,
+      "rating": 3.8,
+      "region": "South America",
+      "isLiked": false,
+      "weight": 300,
+      "flavor_profile": ["Nutty", "Smooth"],
+      "grind_option": ["Whole bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Sophia Brown",
+          "reviewerEmail": "sophia.brown@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Maya Reed",
+          "reviewerEmail": "maya.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Maya Reed",
+          "reviewerEmail": "maya.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ethan Thompson",
+          "reviewerEmail": "ethan.thompson@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://iili.io/H8Y7gGn.webp"
+    },
+    {
+      "_id": "6424353259f9f6fdd657d2e8",
+      "id": 7,
+      "name": "Breezy Beans",
+      "brand": "lavAzza",
+      "description": "This coffee blend is made from beans sourced from Honduras and Costa Rica. It is a light roast coffee with a bright and citrusy flavor profile. It is perfect for pour-over and drip coffee brewing methods.",
+      "price": 11.99,
+      "rating": 4.4,
+      "region": "Central America",
+      "isLiked": false,
+      "weight": 400,
+      "flavor_profile": ["Citrusy"],
+      "grind_option": ["Whole bean", "Filter"],
+      "reviews": [
+        {
+          "rating": 1,
+          "comment": "Disappointing product!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Lincoln Kelly",
+          "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Lincoln Kelly",
+          "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Lucas Allen",
+          "reviewerEmail": "lucas.allen@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Michael Johnson",
+          "reviewerEmail": "michael.johnson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Lila Hudson",
+          "reviewerEmail": "lila.hudson@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 1,
+      "image_url": "https://iili.io/H8Y7lpV.webp"
+    },
+    {
+      "_id": "6424353559f9f6fdd657d2e9",
+      "id": 8,
+      "name": "Indo-Viet Roast",
+      "brand": "lavAzza",
+      "description": "This coffee blend is made from beans sourced from Indonesia and Vietnam. It is a medium-dark roast coffee with a spicy and earthy flavor profile, with notes of cinnamon and clove. It is perfect for drip and French press brewing methods.",
+      "price": 13.99,
+      "rating": 4.6,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 500,
+      "flavor_profile": ["Spicy", "Earthy", "Cinnamon", "Clove"],
+      "grind_option": ["Whole bean", "Filter", "French press"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Zoe Nicholson",
+          "reviewerEmail": "zoe.nicholson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Addison Wright",
+          "reviewerEmail": "addison.wright@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Very unhappy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mateo Perez",
+          "reviewerEmail": "mateo.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Cameron Perez",
+          "reviewerEmail": "cameron.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Aurora Barnes",
+          "reviewerEmail": "aurora.barnes@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://iili.io/H8Y7wYv.webp"
+    },
+    {
+      "_id": "6424353759f9f6fdd657d2ea",
+      "id": 9,
+      "name": "Ethiopian Yirgacheffe",
+      "brand": "lavAzza",
+      "description": "A light and fruity coffee with notes of blueberry and citrus. Grown in the highlands of Ethiopia, this coffee is sure to brighten up your morning.",
+      "price": 12.99,
+      "rating": 4.5,
+      "region": "Africa",
+      "isLiked": false,
+      "weight": 300,
+      "roast_level": 2,
+      "flavor_profile": ["Blueberry", "Citrus"],
+      "grind_option": ["Whole bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Xavier Wright",
+          "reviewerEmail": "xavier.wright@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Mila Hernandez",
+          "reviewerEmail": "mila.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.619Z",
+          "reviewerName": "Sophia Brown",
+          "reviewerEmail": "sophia.brown@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Leo Rivera",
+          "reviewerEmail": "leo.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Jones",
+          "reviewerEmail": "alexander.jones@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Addison Wright",
+          "reviewerEmail": "addison.wright@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7VCF.webp"
+    },
+    {
+      "_id": "6424353959f9f6fdd657d2eb",
+      "id": 10,
+      "name": "Lazy Days",
+      "brand": "lavAzza",
+      "description": "A medium-bodied coffee with a sweet and nutty flavor. Grown in the lush regions of Brazil, this coffee is perfect for a lazy afternoon.",
+      "price": 9.99,
+      "rating": 4.8,
+      "region": "South America",
+      "isLiked": false,
+      "weight": 200,
+      "roast_level": 3,
+      "flavor_profile": ["Hazelnut", "Chocolate", "Caramel"],
+      "grind_option": ["Whole bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Aria Parker",
+          "reviewerEmail": "aria.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Natalie Harris",
+          "reviewerEmail": "natalie.harris@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ava Harris",
+          "reviewerEmail": "ava.harris@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Elijah Hill",
+          "reviewerEmail": "elijah.hill@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Liam Garcia",
+          "reviewerEmail": "liam.garcia@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ella Cook",
+          "reviewerEmail": "ella.cook@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7NvR.webp"
+    },
+    {
+      "_id": "6424353b59f9f6fdd657d2ec",
+      "id": 11,
+      "name": "Andean Almond",
+      "brand": "lavAzza",
+      "description": "A smooth and mellow coffee from the mountains of South America, with hints of almond and toffee.",
+      "price": 10.99,
+      "rating": 4.1,
+      "region": "South America",
+      "isLiked": true,
+      "weight": 500,
+      "roast_level": 3,
+      "flavor_profile": ["Almond", "Toffee"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y5Sgj.webp"
+    },
+    {
+      "_id": "6424353d59f9f6fdd657d2ed",
+      "id": 12,
+      "name": "Savanna Noir",
+      "brand": "lavAzza",
+      "description": "A bold and rich coffee from the African savanna, with notes of dark chocolate and blackcurrant.",
+      "price": 12.99,
+      "rating": 4.2,
+      "region": "Africa",
+      "isLiked": false,
+      "weight": 400,
+      "roast_level": 4,
+      "flavor_profile": ["Dark Chocolate", "Blackcurrant"],
+      "grind_option": ["Whole Bean", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Tyler Davis",
+          "reviewerEmail": "tyler.davis@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Hannah Robinson",
+          "reviewerEmail": "hannah.robinson@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Waste of money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Sophia Jones",
+          "reviewerEmail": "sophia.jones@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Maya Reed",
+          "reviewerEmail": "maya.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Harper Turner",
+          "reviewerEmail": "harper.turner@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7vjI.webp"
+    },
+    {
+      "_id": "6424353f59f9f6fdd657d2ee",
+      "id": 13,
+      "name": "Coconut Kiss",
+      "brand": "lavAzza",
+      "description": "A light and refreshing coffee from the shores of the Asia Pacific, with a subtle coconut flavor.",
+      "price": 9.99,
+      "rating": 4.7,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 300,
+      "roast_level": 2,
+      "flavor_profile": ["Coconut"],
+      "grind_option": ["Whole Bean", "Filter"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "John Doe",
+          "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Avery Carter",
+          "reviewerEmail": "avery.carter@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Evelyn Sanchez",
+          "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mateo Bennett",
+          "reviewerEmail": "mateo.bennett@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Aurora Barnes",
+          "reviewerEmail": "aurora.barnes@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ellie Stewart",
+          "reviewerEmail": "ellie.stewart@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7GQ1.webp"
+    },
+    {
+      "_id": "6424354159f9f6fdd657d2ef",
+      "id": 14,
+      "name": "Arabian Nights",
+      "brand": "lavAzza",
+      "description": "A bold and spicy coffee from the Middle East, with notes of cardamom and cinnamon.",
+      "price": 13.99,
+      "rating": 4.4,
+      "region": "Middle East",
+      "isLiked": false,
+      "weight": 400,
+      "roast_level": 4,
+      "flavor_profile": ["Cardamom", "Cinnamon"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Leah Gutierrez",
+          "reviewerEmail": "leah.gutierrez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Nolan Gonzalez",
+          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Waste of money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Stella Morris",
+          "reviewerEmail": "stella.morris@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ethan Martinez",
+          "reviewerEmail": "ethan.martinez@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Disappointing product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Owen Fisher",
+          "reviewerEmail": "owen.fisher@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Scarlett Wright",
+          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7ckQ.webp"
+    },
+    {
+      "_id": "6424354359f9f6fdd657d2f0",
+      "id": 15,
+      "name": "Midnight Mocha",
+      "brand": "lavAzza",
+      "description": "Indulge in the rich, velvety flavors of this decadent mocha blend. Dark chocolate and espresso notes are combined with a touch of vanilla for a luxurious coffee experience.",
+      "price": 14.99,
+      "rating": 4.8,
+      "region": "South America",
+      "isLiked": false,
+      "weight": 200,
+      "flavor_profile": ["Dark Chocolate", "Espresso", "Vanilla"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Charlotte Lopez",
+          "reviewerEmail": "charlotte.lopez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Would not recommend!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "William Gonzalez",
+          "reviewerEmail": "william.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not worth the price!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ava Harrison",
+          "reviewerEmail": "ava.harrison@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Logan Lee",
+          "reviewerEmail": "logan.lee@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Elena Long",
+          "reviewerEmail": "elena.long@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Grayson Coleman",
+          "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://iili.io/H8Y7Opp.webp"
+    },
+    {
+      "_id": "6424354559f9f6fdd657d2f1",
+      "id": 16,
+      "name": "Himalayan Heights",
+      "brand": "lavAzza",
+      "description": "Grown on the steep slopes of the Himalayan Mountains, this coffee is known for its bright acidity and delicate floral notes. This light roast is perfect for those who prefer a more delicate flavor profile.",
+      "price": 12.99,
+      "rating": 4.5,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 500,
+      "flavor_profile": ["Floral", "Citrus", "Honey"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Pour Over"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Logan Lee",
+          "reviewerEmail": "logan.lee@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Elena Long",
+          "reviewerEmail": "elena.long@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Grayson Coleman",
+          "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Charlotte Lopez",
+          "reviewerEmail": "charlotte.lopez@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Would not recommend!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "William Gonzalez",
+          "reviewerEmail": "william.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Not worth the price!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ava Harrison",
+          "reviewerEmail": "ava.harrison@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 1,
+      "image_url": "https://iili.io/H8Y7j3J.webp"
+    },
+    {
+      "_id": "6424354759f9f6fdd657d2f2",
+      "id": 17,
+      "name": "Sumatra Blend",
+      "brand": "lavAzza",
+      "description": "Get your day started with the bold and earthy flavors of Sumatra. Grown on the lush tropical slopes of the Gayo Highlands, this coffee is known for its full body, low acidity, and notes of dark chocolate and smoke.",
+      "price": 8.99,
+      "rating": 4.8,
+      "region": "Asia Pacific",
+      "isLiked": true,
+      "weight": 400,
+      "flavor_profile": ["Dark Chocolate", "Smoke"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ethan Martinez",
+          "reviewerEmail": "ethan.martinez@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Disappointing product!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Owen Fisher",
+          "reviewerEmail": "owen.fisher@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Scarlett Wright",
+          "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Leah Gutierrez",
+          "reviewerEmail": "leah.gutierrez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Nolan Gonzalez",
+          "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Waste of money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Stella Morris",
+          "reviewerEmail": "stella.morris@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 5,
+      "image_url": "https://iili.io/H8Y7UCX.webp"
+    },
+    {
+      "_id": "6424354959f9f6fdd657d2f3",
+      "id": 18,
+      "name": "Bali Bliss",
+      "brand": "lavAzza",
+      "description": "Escape to the tropical paradise of Bali with this smooth and mellow blend. Grown on small family farms, this coffee is shade-grown and hand-picked for a rich and nuanced flavor profile. Notes of milk chocolate, hazelnut, and a hint of tropical fruit.",
+      "price": 11.99,
+      "rating": 4.7,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 300,
+      "flavor_profile": ["Milk Chocolate", "Hazelnut", "Tropical Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mateo Bennett",
+          "reviewerEmail": "mateo.bennett@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Aurora Barnes",
+          "reviewerEmail": "aurora.barnes@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Ellie Stewart",
+          "reviewerEmail": "ellie.stewart@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "John Doe",
+          "reviewerEmail": "john.doe@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Avery Carter",
+          "reviewerEmail": "avery.carter@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Evelyn Sanchez",
+          "reviewerEmail": "evelyn.sanchez@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://iili.io/H8Y71TB.webp"
+    },
+    {
+      "_id": "6424354d59f9f6fdd657d2f5",
+      "id": 19,
+      "name": "Central Perk",
+      "brand": "lavAzza",
+      "description": "A medium roast coffee with a smooth, nutty flavor and a hint of caramel. Inspired by your favorite coffee shop!",
+      "region": "Central America",
+      "isLiked": false,
+      "weight": 300,
+      "roast_level": 3,
+      "flavor_profile": ["Nutty", "Caramel"],
+      "grind_option": ["Whole bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Sophia Jones",
+          "reviewerEmail": "sophia.jones@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Maya Reed",
+          "reviewerEmail": "maya.reed@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Harper Turner",
+          "reviewerEmail": "harper.turner@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Tyler Davis",
+          "reviewerEmail": "tyler.davis@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Hannah Robinson",
+          "reviewerEmail": "hannah.robinson@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Waste of money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        }
+      ],
+      "image_url": "https://iili.io/H8Y7aYx.webp",
+      "price": 9.99,
+      "rating": 4.4
+    },
+    {
+      "_id": "642d3d8719341833719cd68c",
+      "id": 20,
+      "name": "Chilean Charm",
+      "brand": "lavAzza",
+      "description": "This coffee boasts a smooth and balanced flavor, with notes of chocolate, caramel, and a hint of fruit. It has a medium body and a subtle acidity that will leave you feeling refreshed and energized.",
+      "price": 12.99,
+      "rating": 4.7,
+      "region": "South America",
+      "isLiked": false,
+      "weight": 400,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 2,
+      "image_url": "https://iili.io/H8Y7EhP.webp"
+    },
+    {
+      "_id": "64v35se719341833719cd68c",
+      "id": 21,
+      "name": "Caffè Verona",
+      "brand": "Starbucks",
+      "description": "Well-balanced and full-bodied, Caffè Verona® is a storied dark roast with notes of dark cocoa and caramelized sugar.",
+      "price": 14.52,
+      "rating": 4.7,
+      "region": "Asia/Pacific",
+      "isLiked": false,
+      "weight": 200,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 2,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_CaffeVerona_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se719294833719cd68c",
+      "id": 22,
+      "name": "Pike Place® Roast",
+      "brand": "Starbucks",
+      "description": "A smooth, well-rounded blend of Latin American coffees with subtle notes of cocoa and rich praline, it's perfect for every day.",
+      "price": 16.48,
+      "rating": 4.2,
+      "region": "Latin American",
+      "isLiked": false,
+      "weight": 500,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 2,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Pike_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se71gesf833719cd68c",
+      "id": 23,
+      "name": "Sumatra",
+      "brand": "Starbucks",
+      "description": "This single-origin dark coffee has bold flavor and notes of rich herbs and rustic spice.",
+      "price": 20.48,
+      "rating": 4.7,
+      "region": "Asia/Pacific",
+      "isLiked": false,
+      "weight": 300,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Sumatra_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se71gesf844919cd68c",
+      "id": 24,
+      "name": "Breakfast Blend",
+      "brand": "Starbucks",
+      "description": "Notes of sweet orange and brown sugar mingle in our lightest medium roast coffee.",
+      "price": 18.48,
+      "rating": 4.6,
+      "region": "Latin American",
+      "isLiked": false,
+      "weight": 400,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Breakfast_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se71105f844919cd68c",
+      "id": 25,
+      "name": "French Roast",
+      "brand": "Starbucks",
+      "description": "With notes of dark caramel and sweet smoke, the explosive flavor of French Roast is as dark as our dark roasts get.",
+      "price": 14.48,
+      "rating": 4.8,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 300,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_French_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se711cdf844919cd68c",
+      "id": 26,
+      "name": "House Blend",
+      "brand": "Starbucks",
+      "description": "Aroma, body and flavor all in balance. House Blend is a medium roast with notes of toffee and dusted cocoa.",
+      "price": 16.32,
+      "rating": 4.8,
+      "region": "Latin American",
+      "isLiked": false,
+      "weight": 400,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_House_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se711dnf4344919cd68c",
+      "id": 27,
+      "name": "Espresso Roast",
+      "brand": "Starbucks",
+      "description": "A classic and time-honored dark roast with notes of molasses and caramelized sugar that’s perfect for making classic espresso drinks.",
+      "price": 13.32,
+      "rating": 4.4,
+      "region": "Asia Pacific",
+      "isLiked": false,
+      "weight": 300,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 3,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Espresso_1842x1542_Whole_shadow.png"
+    },
+    {
+      "_id": "64v35se711dnf4chd919cd68c",
+      "id": 28,
+      "name": "Starbucks® Veranda Blend®",
+      "brand": "Starbucks",
+      "description": "Our lightest roasted coffee with notes of toasted malt and milk chocolate.",
+      "price": 16.32,
+      "rating": 4.8,
+      "region": "Latin American",
+      "isLiked": false,
+      "weight": 400,
+      "flavor_profile": ["Chocolate", "Caramel", "Fruit"],
+      "grind_option": ["Whole Bean", "Cafetiere", "Filter", "Espresso"],
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Jonathan Pierce",
+          "reviewerEmail": "jonathan.pierce@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Alexander Hernandez",
+          "reviewerEmail": "alexander.hernandez@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Would buy again!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Clara Berry",
+          "reviewerEmail": "clara.berry@x.dummyjson.com"
+        }
+      ],
+      "roast_level": 4,
+      "image_url": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Veranda_1842x1542_Whole_shadow.png"
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "brand": "lavAzza",
+      "thumbnail": "https://iili.io/H8Y78Qt.webp"
+    },
+    {
+      "id": 2,
+      "brand": "Starbucks",
+      "thumbnail": "https://athome.starbucks.com/sites/default/files/2022-05/CAH_PDP_Veranda_1842x1542_Whole_shadow.png"
+    }
+  ]
+}

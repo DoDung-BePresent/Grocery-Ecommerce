@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { Select, Tabs, ConfigProvider } from "antd";
+import { Select, Tabs, ConfigProvider, Spin } from "antd";
 
 // React Icons
 import { PiStarFill } from "react-icons/pi";
@@ -9,7 +9,6 @@ import { BiCartAlt } from "react-icons/bi";
 import { IoBagCheckOutline } from "react-icons/io5";
 
 import Item4 from "../../assets/images/item-4.png";
-import Comment from "../../components/Comment/Comment";
 
 // Styled Components
 const SelectWrapper = styled(Select)`
@@ -39,46 +38,72 @@ const TabsWrapper = styled(Tabs)`
 // Hooks
 import useMediaQuery from "../../hook/useMediaQuery/useMediaQuery.js";
 import AntBreadcrumb from "../../components/Breadcrumb/Breadcrumb.jsx";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Label from "../../components/Label/Label.jsx";
 import Button from "../../components/Button/Button.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiHeartFill, RiHeartLine } from "react-icons/ri";
 import Search from "../../components/Search/Search.jsx";
-
-// Tabs content
-const items = [
-  {
-    key: "1",
-    label: "Description",
-    children: "Content of Description",
-  },
-  {
-    key: "2",
-    label: "Features",
-    children: "Content of Features",
-  },
-  {
-    key: "3",
-    label: "Review (1100)",
-    children: <Comment />,
-  },
-  {
-    key: "4",
-    label: "Similar Products",
-    children: "Content of Similar Products",
-  },
-];
+import axios from "axios";
+import ProductDescription from "../../components/Product/ProductDescription.jsx";
+import Comment from "../../components/Comment/Comment.jsx";
 
 const Product = () => {
+  const { id } = useParams();
   const isMobile = useMediaQuery(768);
   const darkModeEnabled = useSelector((state) => state.darkMode.enabled);
+  const [product, setProduct] = useState(null);
   const [isLiked, setIsLiked] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleLikeToggle = () => {
     setIsLiked(!isLiked);
   };
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3000/coffees?_id=${id}`);
+        setProduct(res.data[0]);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProduct();
+  }, [id]);
+
+  if (!product) {
+    return (
+      <div className="flex top-0 w-full fixed justify-center items-center h-screen">
+        <Spin size="large" />
+      </div>
+    );
+  }
+
+  // Tabs content
+  const items = [
+    {
+      key: "1",
+      label: "Description",
+      children: <ProductDescription product={product} />,
+    },
+    {
+      key: "2",
+      label: "Features",
+      children: "Content of Features",
+    },
+    {
+      key: "3",
+      label: "Review (1100)",
+      children: <Comment comments={product.reviews} />,
+    },
+    {
+      key: "4",
+      label: "Similar Products",
+      children: "Content of Similar Products",
+    },
+  ];
+
   return (
     <section className="section">
       {/* SEARCH */}
@@ -100,25 +125,26 @@ const Product = () => {
             title: <Link to="/">Home</Link>,
           },
           { title: "Coffee" },
-          { title: "Coffee Beans" },
           { title: "LavAzza" },
+          { title: `${product.name}` },
         ]}
       />
       {/* Product */}
       <div className="flex md:flex-row flex-col md:mt-6 items-center md:dark:bg-transparent dark:bg-dark-1 rounded-lg md:rounded-none mt-4">
-        <div className="md:w-[40%] flex justify-center">
-          <img src={Item4} alt="" className="w-[90%]" />
+        <div className="md:w-[40%] flex justify-center overflow-hidden pt-5 md:pt-0">
+          <img src={product.image_url} alt="" className="w-full scale-150" />
         </div>
-        <div className="md:w-[60%] p-4 md:p-10 bg-secondary-1 rounded-2xl md:rounded-lg h-fit dark:bg-dark-1 dark:text-dark-s-2">
+        <div className="md:w-[60%] w-full mt-6 md:mt-0 p-4 md:p-10 bg-secondary-1 rounded-2xl md:rounded-lg h-fit dark:bg-dark-1 dark:text-dark-s-2">
           <h1 className="md:text-3xl text-lg md:font-bold font-extrabold">
-            Coffee Beans - Espresso Arabica and Robusta Beans
+            {product.name}
           </h1>
           <div className="flex md:flex-row flex-col md:gap-16 md:mt-6 mt-4">
             <div className="flex flex-col gap-5 md:w-[35%]">
               {/* Reviews */}
               <div className="flex items-center font-bold">
                 <span className="flex items-center gap-2">
-                  <PiStarFill className="text-yellow-400 text-lg" /> (3.5)
+                  <PiStarFill className="text-yellow-400 text-lg" /> (
+                  {product.rating})
                 </span>
                 <span> 1100 Reviews</span>
               </div>
@@ -152,6 +178,7 @@ const Product = () => {
                         label: "500g",
                       },
                     ]}
+                    value={product.weight}
                     $darkModeEnabled={darkModeEnabled}
                   />
                   <div className="flex items-center justify-between my-5">
@@ -183,13 +210,13 @@ const Product = () => {
 
               <div className="mt-6 border-2 rounded-lg border-gray-300 p-3">
                 <div className="font-bold flex items-center">
-                  $500.00{" "}
+                  ${product.price}{" "}
                   <span className="px-3 bg-green-200 rounded-lg text-green-600 ml-2">
                     + 10%
                   </span>
                 </div>
                 <div className="md:text-6xl text-4xl font-bold my-6 text-center">
-                  $540.00
+                  ${product.price ? (product.price * (1 + 0.1)).toFixed(2) : ""}
                 </div>
                 <div className="flex items-center gap-4">
                   <Button children="Add to cart" padding="py-2" />
